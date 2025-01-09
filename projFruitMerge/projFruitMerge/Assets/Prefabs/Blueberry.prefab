@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 8153349217671469907}
   - component: {fileID: 8703533896647376324}
   - component: {fileID: 9025232319563498178}
+  - component: {fileID: -4134477611582704378}
   m_Layer: 0
   m_Name: Blueberry
-  m_TagString: Untagged
+  m_TagString: Blueberry
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -133,7 +134,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7244595180886049873}
-  m_BodyType: 0
+  m_BodyType: 2
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -152,3 +153,16 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &-4134477611582704378
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7244595180886049873}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15e19fbaee9a32a41b7dfb952850d942, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NextFruit: {fileID: 393225733925303750, guid: 2232c9ca14a3da742bff7eb8e07cd6dc, type: 3}

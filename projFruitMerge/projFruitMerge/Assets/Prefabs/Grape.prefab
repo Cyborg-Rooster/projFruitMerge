@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 5381127618802550487}
   - component: {fileID: 8674479750930459244}
   - component: {fileID: 7193625403286533411}
+  - component: {fileID: 863667538456717481}
   m_Layer: 0
   m_Name: Grape
-  m_TagString: Untagged
+  m_TagString: Grape
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 6351689214275024682}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.668, y: 1.473, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -177,7 +178,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6351689214275024682}
-  m_BodyType: 0
+  m_BodyType: 2
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -196,3 +197,16 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &863667538456717481
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6351689214275024682}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15e19fbaee9a32a41b7dfb952850d942, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NextFruit: {fileID: 68097804642267378, guid: 4b9e752ba637f5d4eb1781cf08999f99, type: 3}
