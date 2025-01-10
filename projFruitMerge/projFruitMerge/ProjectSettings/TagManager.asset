@@ -3,12 +3,24 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 3
-  tags: []
+  tags:
+  - Blueberry
+  - Cherry
+  - Strawberry
+  - Plum
+  - Lime
+  - Peach
+  - Orange
+  - Apple
+  - Grape
+  - Mango
+  - Coconut
+  - Watermelon
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Fruits
   - Water
   - UI
   - 
@@ -43,6 +55,9 @@ TagManager:
     locked: 0
   - name: BasketFruit
     uniqueID: 1448557261
+    locked: 0
+  - name: UI
+    uniqueID: 2863417995
     locked: 0
   m_RenderingLayers:
   - Default

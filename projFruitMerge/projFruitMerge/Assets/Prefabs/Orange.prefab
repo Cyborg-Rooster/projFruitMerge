@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3467799788804792594}
   - component: {fileID: 6582610251081975585}
   - component: {fileID: -681954318489812898}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Orange
   m_TagString: Orange
   m_Icon: {fileID: 0}
@@ -165,4 +165,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15e19fbaee9a32a41b7dfb952850d942, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CameraShakeController: {fileID: 0}
+  GameController: {fileID: 0}
   NextFruit: {fileID: 1700421952650417340, guid: 03c9fb4a5656f884c9ce3bdb20ccaef9, type: 3}
+  PointsToAddOnMerge: 250

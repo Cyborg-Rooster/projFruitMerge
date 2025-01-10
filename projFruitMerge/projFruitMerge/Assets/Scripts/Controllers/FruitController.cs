@@ -3,7 +3,12 @@ using UnityEngine;
 
 public class FruitController : MonoBehaviour
 {
+    public CameraShakeController CameraShakeController;
+    public GameController GameController;
+
     [SerializeField] GameObject NextFruit;
+
+    [SerializeField] int PointsToAddOnMerge;
 
     bool collided;
     bool onGame;
@@ -26,10 +31,12 @@ public class FruitController : MonoBehaviour
                     new Vector3(touch.position.x, touch.position.y, Camera.main.nearClipPlane)
                 );
 
-                Debug.Log(touchPosition.x);
+                float realX;
+                if (touchPosition.x < -0.88) realX = -0.8f;
+                else if (touchPosition.x > 0.88) realX = 0.8f;
+                else realX = touchPosition.x;
 
-                if(touchPosition.x >= -0.88 && touchPosition.x <= 0.88) 
-                    transform.position = new Vector3(touchPosition.x, transform.position.y, transform.position.z);
+                transform.position = new Vector3(realX, transform.position.y, transform.position.z);
 
                 if (touch.phase == TouchPhase.Ended) SetOnGame();
             }
@@ -50,7 +57,13 @@ public class FruitController : MonoBehaviour
                 collided = true;
                 fruitCollided.GetComponent<FruitController>().collided = collided;
 
+                ft.CameraShakeController = CameraShakeController;
+                ft.GameController = GameController;
                 ft.SetOnGame();
+
+                CameraShakeController.TriggerShake();
+                GameController.AddPoints(PointsToAddOnMerge);
+
                 Destroy(fruitCollided);
                 Destroy(gameObject);
             }

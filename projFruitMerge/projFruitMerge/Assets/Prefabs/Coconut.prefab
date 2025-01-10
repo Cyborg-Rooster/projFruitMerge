@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5929684848276754457}
   - component: {fileID: 8328210958660503687}
   - component: {fileID: -2200069173747127338}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Coconut
   m_TagString: Coconut
   m_Icon: {fileID: 0}
@@ -165,4 +165,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15e19fbaee9a32a41b7dfb952850d942, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CameraShakeController: {fileID: 0}
+  GameController: {fileID: 0}
   NextFruit: {fileID: 7386577768634355142, guid: 46e79e1ff6f704145ac5cfd051662062, type: 3}
+  PointsToAddOnMerge: 900

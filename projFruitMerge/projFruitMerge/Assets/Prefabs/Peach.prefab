@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5045836139327061659}
   - component: {fileID: 2098255760055162533}
   - component: {fileID: -5561545475461707351}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Peach
   m_TagString: Peach
   m_Icon: {fileID: 0}
@@ -165,4 +165,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15e19fbaee9a32a41b7dfb952850d942, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CameraShakeController: {fileID: 0}
+  GameController: {fileID: 0}
   NextFruit: {fileID: 847391902044803537, guid: a79ec14424ae503448d9163cf6a1e29e, type: 3}
+  PointsToAddOnMerge: 200

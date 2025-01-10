@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6010731087219683039}
   - component: {fileID: 5633108767580687434}
   - component: {fileID: -2190665518632080299}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Watermelon
   m_TagString: Watermelon
   m_Icon: {fileID: 0}
@@ -165,3 +165,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15e19fbaee9a32a41b7dfb952850d942, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CameraShakeController: {fileID: 0}
+  GameController: {fileID: 0}
+  NextFruit: {fileID: 0}
+  PointsToAddOnMerge: 2000

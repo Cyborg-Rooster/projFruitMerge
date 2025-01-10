@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4035938582866783681}
   - component: {fileID: 7035829576731970212}
   - component: {fileID: -7994936101341494755}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mango
   m_TagString: Mango
   m_Icon: {fileID: 0}
@@ -189,4 +189,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15e19fbaee9a32a41b7dfb952850d942, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CameraShakeController: {fileID: 0}
+  GameController: {fileID: 0}
   NextFruit: {fileID: 6194916442714615303, guid: 777654cd87954da4a9d2f618b863e143, type: 3}
+  PointsToAddOnMerge: 750

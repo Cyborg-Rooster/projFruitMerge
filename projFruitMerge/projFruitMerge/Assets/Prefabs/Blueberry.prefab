@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8703533896647376324}
   - component: {fileID: 9025232319563498178}
   - component: {fileID: -4134477611582704378}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Blueberry
   m_TagString: Blueberry
   m_Icon: {fileID: 0}
@@ -165,4 +165,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15e19fbaee9a32a41b7dfb952850d942, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CameraShakeController: {fileID: 0}
+  GameController: {fileID: 0}
   NextFruit: {fileID: 393225733925303750, guid: 2232c9ca14a3da742bff7eb8e07cd6dc, type: 3}
+  PointsToAddOnMerge: 20

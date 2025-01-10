@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3398537618670717697}
   - component: {fileID: 7198980913511083710}
   - component: {fileID: 1530164464710376802}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Plum
   m_TagString: Plum
   m_Icon: {fileID: 0}
@@ -124,8 +124,8 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
-  m_Radius: 0.115
+  m_Offset: {x: 0, y: 0.0017199814}
+  m_Radius: 0.10089609
 --- !u!50 &7198980913511083710
 Rigidbody2D:
   serializedVersion: 5
@@ -165,4 +165,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15e19fbaee9a32a41b7dfb952850d942, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CameraShakeController: {fileID: 0}
+  GameController: {fileID: 0}
   NextFruit: {fileID: 9020812642850659467, guid: 7a4766300c893fd46a9c1326a0f09191, type: 3}
+  PointsToAddOnMerge: 80
