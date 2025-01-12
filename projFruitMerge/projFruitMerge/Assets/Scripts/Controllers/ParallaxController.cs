@@ -8,7 +8,7 @@ public class ParallaxController : MonoBehaviour
     [SerializeField] float Speed;
     [SerializeField] bool IsParallax;
 
-    [SerializeField] bool Moving;
+    public bool Moving;
 
     RectTransform RectTransform;
 

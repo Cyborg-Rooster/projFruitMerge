@@ -8,9 +8,9 @@ using UnityEngine.UI;
 
 static class TextManager
 {
-    public static void SetText(GameObject gameObject, string text)
+    public static void SetText(GameObject gameObject, object text)
     {
-        gameObject.GetComponent<Text>().text = text;
+        gameObject.GetComponent<Text>().text = text.ToString();
     }
 }
 

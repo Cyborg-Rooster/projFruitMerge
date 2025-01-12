@@ -20,6 +20,8 @@ class FruitSpawnerController : MonoBehaviour
     [SerializeField] float Distance;
     [SerializeField] float CollisionTime;
 
+    RaycastManager RaycastManager;
+
     int nextFruitIndex;
 
     private void Start()
@@ -33,18 +35,23 @@ class FruitSpawnerController : MonoBehaviour
 
         nextFruitIndex = RandomManager.GetRandomIndex(SpritesFruits.Count);
         Renderer.sprite = SpritesFruits[nextFruitIndex];
+
+        RaycastManager = new RaycastManager();
     }
 
     private void Update()
     {
-        if(Input.touchCount > 0)
+        if (GameController.OnGame)
         {
-            Touch touch = Input.GetTouch(0);
-            if(touch.phase == TouchPhase.Ended) StartCoroutine(SpawnFruit());
-        }
+            if (Input.touchCount > 0)
+            {
+                Touch touch = Input.GetTouch(0);
+                if (touch.phase == TouchPhase.Ended) StartCoroutine(SpawnFruit());
+            }
 
-        if(RaycastManager.IsColliding(Distance, CollisionTime, StartPosition, LayerMask)) HeightController.SetActive(true);
-        else HeightController.SetActive(false);
+            if (RaycastManager.IsColliding(Distance, CollisionTime, StartPosition, LayerMask)) HeightController.SetActive(true);
+            else HeightController.SetActive(false);
+        }
     }
 
     IEnumerator SpawnFruit()

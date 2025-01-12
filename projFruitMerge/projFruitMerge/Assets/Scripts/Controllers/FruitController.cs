@@ -21,24 +21,27 @@ public class FruitController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.touchCount > 0)
+        if (GameController.OnGame)
         {
-            if (!onGame)
-            { 
-                Touch touch = Input.GetTouch(0);
-                Vector3 touchPosition = Camera.main.ScreenToWorldPoint
-                (
-                    new Vector3(touch.position.x, touch.position.y, Camera.main.nearClipPlane)
-                );
+            if (Input.touchCount > 0)
+            {
+                if (!onGame)
+                {
+                    Touch touch = Input.GetTouch(0);
+                    Vector3 touchPosition = Camera.main.ScreenToWorldPoint
+                    (
+                        new Vector3(touch.position.x, touch.position.y, Camera.main.nearClipPlane)
+                    );
 
-                float realX;
-                if (touchPosition.x < -0.88) realX = -0.8f;
-                else if (touchPosition.x > 0.88) realX = 0.8f;
-                else realX = touchPosition.x;
+                    float realX;
+                    if (touchPosition.x < -0.88) realX = -0.8f;
+                    else if (touchPosition.x > 0.88) realX = 0.8f;
+                    else realX = touchPosition.x;
 
-                transform.position = new Vector3(realX, transform.position.y, transform.position.z);
+                    transform.position = new Vector3(realX, transform.position.y, transform.position.z);
 
-                if (touch.phase == TouchPhase.Ended) SetOnGame();
+                    if (touch.phase == TouchPhase.Ended) SetOnGame();
+                }
             }
         }
     }

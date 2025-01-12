@@ -4,11 +4,11 @@ using UnityEngine;
 
 class RaycastManager
 {
-    static Vector2 Direction = Vector2.right;
+    Vector2 Direction = Vector2.right;
 
-    static Dictionary<string, float> collisionsTimers = new Dictionary<string, float>();
+    Dictionary<string, float> collisionsTimers = new Dictionary<string, float>();
 
-    public static bool IsColliding(float distance, float collisionTime, Vector2 StartPos, LayerMask layerMask)
+    public bool IsColliding(float distance, float collisionTime, Vector2 StartPos, LayerMask layerMask)
     {
         RaycastHit2D[] hits = Physics2D.RaycastAll(StartPos, Direction, distance, layerMask);
         Debug.DrawLine(StartPos, StartPos + Direction * distance, Color.red);
