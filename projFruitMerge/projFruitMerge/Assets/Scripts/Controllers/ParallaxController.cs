@@ -10,9 +10,13 @@ public class ParallaxController : MonoBehaviour
 
     [SerializeField] bool Moving;
 
+    RectTransform RectTransform;
+
+    bool isUI;
+
     void Start()
     {
-        
+        isUI = TryGetComponent<RectTransform>(out RectTransform);
     }
 
     void Update()
@@ -22,8 +26,17 @@ public class ParallaxController : MonoBehaviour
 
     public void Move()
     {
-        transform.position = Vector2.MoveTowards(transform.position, EndPos, Speed * Time.deltaTime);
+        if (isUI)
+        {
+            RectTransform.anchoredPosition = Vector2.MoveTowards(RectTransform.anchoredPosition, EndPos, Speed * Time.deltaTime);
 
-        if ((Vector2)transform.position == EndPos && IsParallax) transform.position = StartPos;
+            if (RectTransform.anchoredPosition == EndPos && IsParallax) RectTransform.anchoredPosition = StartPos;
+        }
+        else
+        {
+            transform.position = Vector2.MoveTowards(transform.position, EndPos, Speed * Time.deltaTime);
+
+            if ((Vector2)transform.position == EndPos && IsParallax) transform.position = StartPos;
+        }
     }
 }
