@@ -3,7 +3,6 @@ using System.IO;
 using System.Data;
 using Mono.Data.Sqlite;
 using UnityEngine;
-using Unity.VisualScripting.Dependencies.Sqlite;
 using System.Collections.Generic;
 
 class SQLiteManager

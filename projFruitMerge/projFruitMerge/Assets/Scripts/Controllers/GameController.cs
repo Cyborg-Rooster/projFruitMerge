@@ -29,11 +29,6 @@ public class GameController : MonoBehaviour
         SQLiteManager.Initialize();
         object[] data = SQLiteManager.ReturnValues(CommonQuery.Select("*", "PLAYER"));
 
-        Debug.Log(data[0]);
-        Debug.Log(data[1]);
-        Debug.Log(data[2]);
-        Debug.Log(data[3]);
-
         Player = new Player()
         {
             BestScore = Convert.ToInt32(data[0]),

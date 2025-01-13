@@ -1,0 +1,2704 @@
+fileFormatVersion: 2
+guid: 5e2a84d09f0438e42b4bbb32f5de9d40
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6277010346197230082
+    second: PixelatedArialBold_copy_0
+  - first:
+      213: 5629693245997459333
+    second: PixelatedArialBold_copy_1
+  - first:
+      213: -9181109799503723286
+    second: PixelatedArialBold_copy_2
+  - first:
+      213: -8843962577051200894
+    second: PixelatedArialBold_copy_3
+  - first:
+      213: -5484464432421301553
+    second: PixelatedArialBold_copy_4
+  - first:
+      213: 2368290541120991140
+    second: PixelatedArialBold_copy_5
+  - first:
+      213: -142823360252566286
+    second: PixelatedArialBold_copy_6
+  - first:
+      213: 6376756251041113383
+    second: PixelatedArialBold_copy_7
+  - first:
+      213: 3164162472009248596
+    second: PixelatedArialBold_copy_8
+  - first:
+      213: -1715955042226203842
+    second: PixelatedArialBold_copy_9
+  - first:
+      213: -3730081157985223565
+    second: PixelatedArialBold_copy_10
+  - first:
+      213: 8454578913803631188
+    second: PixelatedArialBold_copy_11
+  - first:
+      213: -2355981333297407286
+    second: PixelatedArialBold_copy_12
+  - first:
+      213: 8145885254187332687
+    second: PixelatedArialBold_copy_13
+  - first:
+      213: 4207512526003962005
+    second: PixelatedArialBold_copy_14
+  - first:
+      213: -8064351310692069571
+    second: PixelatedArialBold_copy_15
+  - first:
+      213: 6784244408316025054
+    second: PixelatedArialBold_copy_16
+  - first:
+      213: 7155854348603803237
+    second: PixelatedArialBold_copy_17
+  - first:
+      213: -5134605240779519184
+    second: PixelatedArialBold_copy_18
+  - first:
+      213: 7947221793828729386
+    second: PixelatedArialBold_copy_19
+  - first:
+      213: -2107238754571214622
+    second: PixelatedArialBold_copy_20
+  - first:
+      213: -2665469071402739634
+    second: PixelatedArialBold_copy_21
+  - first:
+      213: 1951469297936078923
+    second: PixelatedArialBold_copy_22
+  - first:
+      213: 695812996791947321
+    second: PixelatedArialBold_copy_23
+  - first:
+      213: 7447156485464197618
+    second: PixelatedArialBold_copy_24
+  - first:
+      213: -2510737869836958172
+    second: PixelatedArialBold_copy_25
+  - first:
+      213: 7728243805689383106
+    second: PixelatedArialBold_copy_26
+  - first:
+      213: -3925069669586243660
+    second: PixelatedArialBold_copy_27
+  - first:
+      213: 7062515556206147905
+    second: PixelatedArialBold_copy_28
+  - first:
+      213: 5580871033772045938
+    second: PixelatedArialBold_copy_29
+  - first:
+      213: -7845609726899382950
+    second: PixelatedArialBold_copy_30
+  - first:
+      213: -8452681130621897951
+    second: PixelatedArialBold_copy_31
+  - first:
+      213: -1129878103123268611
+    second: PixelatedArialBold_copy_32
+  - first:
+      213: 4867911629165982039
+    second: PixelatedArialBold_copy_33
+  - first:
+      213: 5222010980285943574
+    second: PixelatedArialBold_copy_34
+  - first:
+      213: 8752755901481973262
+    second: PixelatedArialBold_copy_35
+  - first:
+      213: 7875005033208858195
+    second: PixelatedArialBold_copy_36
+  - first:
+      213: -8835231678414076033
+    second: PixelatedArialBold_copy_37
+  - first:
+      213: -8931599047737670999
+    second: PixelatedArialBold_copy_38
+  - first:
+      213: 2006391042486181313
+    second: PixelatedArialBold_copy_39
+  - first:
+      213: 55433464629494122
+    second: PixelatedArialBold_copy_40
+  - first:
+      213: -4191448685185374391
+    second: PixelatedArialBold_copy_41
+  - first:
+      213: 8756447198574137156
+    second: PixelatedArialBold_copy_42
+  - first:
+      213: -5412805292053808452
+    second: PixelatedArialBold_copy_43
+  - first:
+      213: -135456374351022471
+    second: PixelatedArialBold_copy_44
+  - first:
+      213: 7135502819957836370
+    second: PixelatedArialBold_copy_45
+  - first:
+      213: 8253030165090844346
+    second: PixelatedArialBold_copy_46
+  - first:
+      213: -4726648982078442341
+    second: PixelatedArialBold_copy_47
+  - first:
+      213: 6728846654852042603
+    second: PixelatedArialBold_copy_48
+  - first:
+      213: -6469848650347689229
+    second: PixelatedArialBold_copy_49
+  - first:
+      213: 4106064139710794479
+    second: PixelatedArialBold_copy_50
+  - first:
+      213: -6878938561206355099
+    second: PixelatedArialBold_copy_51
+  - first:
+      213: -9170883453729339979
+    second: PixelatedArialBold_copy_52
+  - first:
+      213: 4520549698979372111
+    second: PixelatedArialBold_copy_53
+  - first:
+      213: 6644068401683675134
+    second: PixelatedArialBold_copy_54
+  - first:
+      213: 800426919858017451
+    second: PixelatedArialBold_copy_55
+  - first:
+      213: 6597244892235609435
+    second: PixelatedArialBold_copy_56
+  - first:
+      213: 8193777426139331676
+    second: PixelatedArialBold_copy_57
+  - first:
+      213: -5367624827448720414
+    second: PixelatedArialBold_copy_58
+  - first:
+      213: 2156616243235583181
+    second: PixelatedArialBold_copy_59
+  - first:
+      213: 7728139438156984477
+    second: PixelatedArialBold_copy_60
+  - first:
+      213: -6257235704734097930
+    second: PixelatedArialBold_copy_61
+  - first:
+      213: 3755820469602532572
+    second: PixelatedArialBold_copy_62
+  - first:
+      213: 7871699267174822667
+    second: PixelatedArialBold_copy_63
+  - first:
+      213: 1839097047471185343
+    second: PixelatedArialBold_copy_64
+  - first:
+      213: 6878444752218470631
+    second: PixelatedArialBold_copy_65
+  - first:
+      213: -5830023279782779082
+    second: PixelatedArialBold_copy_66
+  - first:
+      213: -221914987568141594
+    second: PixelatedArialBold_copy_67
+  - first:
+      213: -6099994814602824480
+    second: PixelatedArialBold_copy_68
+  - first:
+      213: 3527790360731832362
+    second: PixelatedArialBold_copy_69
+  - first:
+      213: -8336668699655206349
+    second: PixelatedArialBold_copy_70
+  - first:
+      213: -5112005202707597544
+    second: PixelatedArialBold_copy_71
+  - first:
+      213: 3221648469727443043
+    second: PixelatedArialBold_copy_72
+  - first:
+      213: 5461431159367424498
+    second: PixelatedArialBold_copy_73
+  - first:
+      213: 4506327916990262472
+    second: PixelatedArialBold_copy_74
+  - first:
+      213: 8578567415190461545
+    second: PixelatedArialBold_copy_75
+  - first:
+      213: -2010694154890023958
+    second: PixelatedArialBold_copy_76
+  - first:
+      213: -6710397102674017993
+    second: PixelatedArialBold_copy_77
+  - first:
+      213: -6959113121047293927
+    second: PixelatedArialBold_copy_78
+  - first:
+      213: 7986074063182053201
+    second: PixelatedArialBold_copy_79
+  - first:
+      213: 4305580316201436060
+    second: PixelatedArialBold_copy_80
+  - first:
+      213: 1732770985218873091
+    second: PixelatedArialBold_copy_81
+  - first:
+      213: -6776481551558115976
+    second: PixelatedArialBold_copy_82
+  - first:
+      213: -3566395992678812329
+    second: PixelatedArialBold_copy_83
+  - first:
+      213: -9015507781826327588
+    second: PixelatedArialBold_copy_84
+  - first:
+      213: -5468551599601393908
+    second: PixelatedArialBold_copy_85
+  - first:
+      213: 8206161201700370733
+    second: PixelatedArialBold_copy_86
+  - first:
+      213: -5271885719383343870
+    second: PixelatedArialBold_copy_87
+  - first:
+      213: 6918336695838171374
+    second: PixelatedArialBold_copy_88
+  - first:
+      213: -7129075511882670981
+    second: PixelatedArialBold_copy_89
+  - first:
+      213: -799455392728466314
+    second: PixelatedArialBold_copy_90
+  - first:
+      213: -1960185790842499053
+    second: PixelatedArialBold_copy_91
+  - first:
+      213: -1833284174206582159
+    second: PixelatedArialBold_copy_92
+  - first:
+      213: 5833373727763871775
+    second: PixelatedArialBold_copy_93
+  - first:
+      213: 5356337075908942288
+    second: PixelatedArialBold_copy_94
+  - first:
+      213: -371142604732604703
+    second: PixelatedArialBold_copy_95
+  - first:
+      213: 159774388427714806
+    second: PixelatedArialBold_copy_96
+  - first:
+      213: -5515386663022549061
+    second: PixelatedArialBold_copy_97
+  - first:
+      213: -2846245400674123845
+    second: PixelatedArialBold_copy_98
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: 1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: 1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: 1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: PixelatedArialBold_copy_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 99
+        width: 10
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: efd567fd85493e8a0800000000000000
+      internalID: -6277010346197230082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelatedArialBold_copy_1
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 115
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 587281a0e20b02e40800000000000000
+      internalID: 5629693245997459333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelatedArialBold_copy_2
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 102
+        width: 9
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae409bce745269080800000000000000
+      internalID: -9181109799503723286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelatedArialBold_copy_3
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 107
+        width: 12
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 282d30cb4eee34580800000000000000
+      internalID: -8843962577051200894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelatedArialBold_copy_4
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 113
+        width: 12
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc2934a18a443e3b0800000000000000
+      internalID: -5484464432421301553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelatedArialBold_copy_5
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 115
+        width: 9
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4af2f6c03bbddd020800000000000000
+      internalID: 2368290541120991140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelatedArialBold_copy_6
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 100
+        width: 12
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f4a48a19e6940ef0800000000000000
+      internalID: -142823360252566286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelatedArialBold_copy_7
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 115
+        width: 9
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 725ae8a560ace7850800000000000000
+      internalID: 6376756251041113383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelatedArialBold_copy_8
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 107
+        width: 6
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45fabbbf00d59eb20800000000000000
+      internalID: 3164162472009248596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelatedArialBold_copy_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 86
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e3311990bf3bf28e0800000000000000
+      internalID: -1715955042226203842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelatedArialBold_copy_10
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 90
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 37cb9ea13f61c3cc0800000000000000
+      internalID: -3730081157985223565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelatedArialBold_copy_11
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 97
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45af5c25ab2b45570800000000000000
+      internalID: 8454578913803631188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelatedArialBold_copy_12
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 98
+        width: 12
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aca5b5bb57fdd4fd0800000000000000
+      internalID: -2355981333297407286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelatedArialBold_copy_13
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 88
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f44bdecda7ffb0170800000000000000
+      internalID: 8145885254187332687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelatedArialBold_copy_14
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 94
+        width: 6
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 590097c9956146a30800000000000000
+      internalID: 4207512526003962005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelatedArialBold_copy_15
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 85
+        width: 10
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3f4e3ea53ba51090800000000000000
+      internalID: -8064351310692069571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelatedArialBold_copy_16
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 95
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed85b1b485a762e50800000000000000
+      internalID: 6784244408316025054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelatedArialBold_copy_17
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 96
+        width: 9
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 566c6f0ed93be4360800000000000000
+      internalID: 7155854348603803237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelatedArialBold_copy_18
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 96
+        width: 9
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 03b4a71ecb73eb8b0800000000000000
+      internalID: -5134605240779519184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelatedArialBold_copy_19
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 74
+        width: 10
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a2277648d143a4e60800000000000000
+      internalID: 7947221793828729386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelatedArialBold_copy_20
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 78
+        width: 10
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e0a8d0748591c2e0800000000000000
+      internalID: -2107238754571214622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelatedArialBold_copy_21
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 85
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e48df37700a520bd0800000000000000
+      internalID: -2665469071402739634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelatedArialBold_copy_22
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 75
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b489f85bcf2051b10800000000000000
+      internalID: 1951469297936078923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelatedArialBold_copy_23
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 75
+        width: 9
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 93052e7eb3608a900800000000000000
+      internalID: 695812996791947321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelatedArialBold_copy_24
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 84
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f907d6ed5d995760800000000000000
+      internalID: 7447156485464197618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelatedArialBold_copy_25
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 74
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4264f38b531182dd0800000000000000
+      internalID: -2510737869836958172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelatedArialBold_copy_26
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 80
+        width: 12
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c88ab79bcc304b60800000000000000
+      internalID: 7728243805689383106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelatedArialBold_copy_27
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 83
+        width: 9
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4bfe6a17ee95789c0800000000000000
+      internalID: -3925069669586243660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelatedArialBold_copy_28
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 83
+        width: 9
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1497654ca78130260800000000000000
+      internalID: 7062515556206147905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelatedArialBold_copy_29
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 76
+        width: 9
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 276ff31f2ac337d40800000000000000
+      internalID: 5580871033772045938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelatedArialBold_copy_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 61
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5510dd658bce1390800000000000000
+      internalID: -7845609726899382950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelatedArialBold_copy_31
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 66
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 12372a1cb4b02ba80800000000000000
+      internalID: -8452681130621897951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelatedArialBold_copy_32
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 63
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dfb68dff9ddd150f0800000000000000
+      internalID: -1129878103123268611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelatedArialBold_copy_33
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 74
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7517e6ed5db4e8340800000000000000
+      internalID: 4867911629165982039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelatedArialBold_copy_34
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 64
+        width: 6
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 61f0225b15f487840800000000000000
+      internalID: 5222010980285943574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelatedArialBold_copy_35
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 65
+        width: 10
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e0679894e19087970800000000000000
+      internalID: 8752755901481973262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelatedArialBold_copy_36
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 68
+        width: 12
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 356c3d8aa53a94d60800000000000000
+      internalID: 7875005033208858195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelatedArialBold_copy_37
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 61
+        width: 12
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f77c9db7993f26580800000000000000
+      internalID: -8835231678414076033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelatedArialBold_copy_38
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 66
+        width: 9
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a2016bdcf59c0480800000000000000
+      internalID: -8931599047737670999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelatedArialBold_copy_39
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 66
+        width: 9
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1cd1ae7d50228db10800000000000000
+      internalID: 2006391042486181313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelatedArialBold_copy_40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 49
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6109ef3170f4c000800000000000000
+      internalID: 55433464629494122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelatedArialBold_copy_41
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 54
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9476f39c0abf4d5c0800000000000000
+      internalID: -4191448685185374391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelatedArialBold_copy_42
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 51
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 44fc97d5556258970800000000000000
+      internalID: 8756447198574137156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelatedArialBold_copy_43
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 48
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cba37c0e34ad1e4b0800000000000000
+      internalID: -5412805292053808452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelatedArialBold_copy_44
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 60
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 976be3c2523ce1ef0800000000000000
+      internalID: -135456374351022471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelatedArialBold_copy_45
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 48
+        width: 12
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25a826d5206660360800000000000000
+      internalID: 7135502819957836370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelatedArialBold_copy_46
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 54
+        width: 10
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: abeb2de6537a88270800000000000000
+      internalID: 8253030165090844346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelatedArialBold_copy_47
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 54
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b94b04d2bc1976eb0800000000000000
+      internalID: -4726648982078442341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelatedArialBold_copy_48
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 53
+        width: 12
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b6f0882b16aa16d50800000000000000
+      internalID: 6728846654852042603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelatedArialBold_copy_49
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 46
+        width: 10
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3fa4c756eea7636a0800000000000000
+      internalID: -6469848650347689229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelatedArialBold_copy_50
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 53
+        width: 9
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fea8e68849babf830800000000000000
+      internalID: 4106064139710794479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelatedArialBold_copy_51
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 40
+        width: 9
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 56bfe8323d91980a0800000000000000
+      internalID: -6878938561206355099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelatedArialBold_copy_52
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 53
+        width: 9
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b584f7961a7ab080800000000000000
+      internalID: -9170883453729339979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelatedArialBold_copy_53
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 37
+        width: 8
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4c1a2510083cbe30800000000000000
+      internalID: 4520549698979372111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelatedArialBold_copy_54
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 37
+        width: 14
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef7b0c17209743c50800000000000000
+      internalID: 6644068401683675134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelatedArialBold_copy_55
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 39
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba41cc2fa00bb1b00800000000000000
+      internalID: 800426919858017451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelatedArialBold_copy_56
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 36
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b55b6f9964f1e8b50800000000000000
+      internalID: 6597244892235609435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelatedArialBold_copy_57
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 36
+        width: 10
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5c36a5182526b170800000000000000
+      internalID: 8193777426139331676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelatedArialBold_copy_58
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 40
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e30a5888ad5285b0800000000000000
+      internalID: -5367624827448720414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelatedArialBold_copy_59
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 26
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc4f4e60c07dded10800000000000000
+      internalID: 2156616243235583181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelatedArialBold_copy_60
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 40
+        width: 7
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d90b802afdddf3b60800000000000000
+      internalID: 7728139438156984477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelatedArialBold_copy_61
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 26
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6fdde6f5745d929a0800000000000000
+      internalID: -6257235704734097930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelatedArialBold_copy_62
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 40
+        width: 9
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cdcbcc261da5f1430800000000000000
+      internalID: 3755820469602532572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelatedArialBold_copy_63
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 32
+        width: 10
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b0378a607c4ed3d60800000000000000
+      internalID: 7871699267174822667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelatedArialBold_copy_64
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 39
+        width: 6
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fbd5dfd4509c58910800000000000000
+      internalID: 1839097047471185343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelatedArialBold_copy_65
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 40
+        width: 9
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e8b12ffe05257f50800000000000000
+      internalID: 6878444752218470631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelatedArialBold_copy_66
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 25
+        width: 12
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6372a4047b8971fa0800000000000000
+      internalID: -5830023279782779082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelatedArialBold_copy_67
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 26
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ea6aab9e799becf0800000000000000
+      internalID: -221914987568141594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelatedArialBold_copy_68
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 24
+        width: 7
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e4bfd70907785ba0800000000000000
+      internalID: -6099994814602824480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelatedArialBold_copy_69
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 27
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a20d77d54aa35f030800000000000000
+      internalID: 3527790360731832362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelatedArialBold_copy_70
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 15
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 33a0feabcf33e4c80800000000000000
+      internalID: -8336668699655206349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelatedArialBold_copy_71
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 27
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8173aaa4a528e09b0800000000000000
+      internalID: -5112005202707597544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelatedArialBold_copy_72
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 24
+        width: 10
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 368f845d63895bc20800000000000000
+      internalID: 3221648469727443043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelatedArialBold_copy_73
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 24
+        width: 10
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f9585b14b6eacb40800000000000000
+      internalID: 5461431159367424498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelatedArialBold_copy_74
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 24
+        width: 8
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8cc61ad6d51b98e30800000000000000
+      internalID: 4506327916990262472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelatedArialBold_copy_75
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 22
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 96c1b28ec913d0770800000000000000
+      internalID: 8578567415190461545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelatedArialBold_copy_76
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 24
+        width: 11
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aeb63d9b1549814e0800000000000000
+      internalID: -2010694154890023958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelatedArialBold_copy_77
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 12
+        width: 9
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7310e496361efd2a0800000000000000
+      internalID: -6710397102674017993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelatedArialBold_copy_78
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9105734cc734c6f90800000000000000
+      internalID: -6959113121047293927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelatedArialBold_copy_79
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 9
+        width: 7
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 15f3de56c0c34de60800000000000000
+      internalID: 7986074063182053201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelatedArialBold_copy_80
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 0
+        width: 17
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c93c9135c7e70cb30800000000000000
+      internalID: 4305580316201436060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelatedArialBold_copy_81
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 12
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 307131bc70a0c0810800000000000000
+      internalID: 1732770985218873091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelatedArialBold_copy_82
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 0
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87df364aee915f1a0800000000000000
+      internalID: -6776481551558115976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelatedArialBold_copy_83
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 12
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 755b0008dbd918ec0800000000000000
+      internalID: -3566395992678812329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelatedArialBold_copy_84
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 0
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cdbc87a407b72e280800000000000000
+      internalID: -9015507781826327588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelatedArialBold_copy_85
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 12
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0f5dd53b4dcb14b0800000000000000
+      internalID: -5468551599601393908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelatedArialBold_copy_86
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 0
+        width: 10
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d2971f4822422e170800000000000000
+      internalID: 8206161201700370733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelatedArialBold_copy_87
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 12
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 20d73bfaedf76d6b0800000000000000
+      internalID: -5271885719383343870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelatedArialBold_copy_88
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 0
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee0ebf7e19ed20060800000000000000
+      internalID: 6918336695838171374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelatedArialBold_copy_89
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 12
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b7c1c49e79f601d90800000000000000
+      internalID: -7129075511882670981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelatedArialBold_copy_90
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 0
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 67c36a65e83c7e4f0800000000000000
+      internalID: -799455392728466314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelatedArialBold_copy_91
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 12
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3109013a8650cc4e0800000000000000
+      internalID: -1960185790842499053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelatedArialBold_copy_92
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 0
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1724218b1cdde86e0800000000000000
+      internalID: -1833284174206582159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelatedArialBold_copy_93
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 12
+        width: 10
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f183675bf7e44f050800000000000000
+      internalID: 5833373727763871775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelatedArialBold_copy_94
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 10
+        width: 8
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d99ec20138855a40800000000000000
+      internalID: 5356337075908942288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelatedArialBold_copy_95
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 10
+        width: 12
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ee56e374cf69daf0800000000000000
+      internalID: -371142604732604703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelatedArialBold_copy_96
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 0
+        width: 13
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f07072b5f1a73200800000000000000
+      internalID: 159774388427714806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelatedArialBold_copy_97
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 0
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb72d9f3d096573b0800000000000000
+      internalID: -5515386663022549061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelatedArialBold_copy_98
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 0
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bbfba3d53ea1088d0800000000000000
+      internalID: -2846245400674123845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      PixelatedArialBold_copy_0: -6277010346197230082
+      PixelatedArialBold_copy_1: 5629693245997459333
+      PixelatedArialBold_copy_10: -3730081157985223565
+      PixelatedArialBold_copy_11: 8454578913803631188
+      PixelatedArialBold_copy_12: -2355981333297407286
+      PixelatedArialBold_copy_13: 8145885254187332687
+      PixelatedArialBold_copy_14: 4207512526003962005
+      PixelatedArialBold_copy_15: -8064351310692069571
+      PixelatedArialBold_copy_16: 6784244408316025054
+      PixelatedArialBold_copy_17: 7155854348603803237
+      PixelatedArialBold_copy_18: -5134605240779519184
+      PixelatedArialBold_copy_19: 7947221793828729386
+      PixelatedArialBold_copy_2: -9181109799503723286
+      PixelatedArialBold_copy_20: -2107238754571214622
+      PixelatedArialBold_copy_21: -2665469071402739634
+      PixelatedArialBold_copy_22: 1951469297936078923
+      PixelatedArialBold_copy_23: 695812996791947321
+      PixelatedArialBold_copy_24: 7447156485464197618
+      PixelatedArialBold_copy_25: -2510737869836958172
+      PixelatedArialBold_copy_26: 7728243805689383106
+      PixelatedArialBold_copy_27: -3925069669586243660
+      PixelatedArialBold_copy_28: 7062515556206147905
+      PixelatedArialBold_copy_29: 5580871033772045938
+      PixelatedArialBold_copy_3: -8843962577051200894
+      PixelatedArialBold_copy_30: -7845609726899382950
+      PixelatedArialBold_copy_31: -8452681130621897951
+      PixelatedArialBold_copy_32: -1129878103123268611
+      PixelatedArialBold_copy_33: 4867911629165982039
+      PixelatedArialBold_copy_34: 5222010980285943574
+      PixelatedArialBold_copy_35: 8752755901481973262
+      PixelatedArialBold_copy_36: 7875005033208858195
+      PixelatedArialBold_copy_37: -8835231678414076033
+      PixelatedArialBold_copy_38: -8931599047737670999
+      PixelatedArialBold_copy_39: 2006391042486181313
+      PixelatedArialBold_copy_4: -5484464432421301553
+      PixelatedArialBold_copy_40: 55433464629494122
+      PixelatedArialBold_copy_41: -4191448685185374391
+      PixelatedArialBold_copy_42: 8756447198574137156
+      PixelatedArialBold_copy_43: -5412805292053808452
+      PixelatedArialBold_copy_44: -135456374351022471
+      PixelatedArialBold_copy_45: 7135502819957836370
+      PixelatedArialBold_copy_46: 8253030165090844346
+      PixelatedArialBold_copy_47: -4726648982078442341
+      PixelatedArialBold_copy_48: 6728846654852042603
+      PixelatedArialBold_copy_49: -6469848650347689229
+      PixelatedArialBold_copy_5: 2368290541120991140
+      PixelatedArialBold_copy_50: 4106064139710794479
+      PixelatedArialBold_copy_51: -6878938561206355099
+      PixelatedArialBold_copy_52: -9170883453729339979
+      PixelatedArialBold_copy_53: 4520549698979372111
+      PixelatedArialBold_copy_54: 6644068401683675134
+      PixelatedArialBold_copy_55: 800426919858017451
+      PixelatedArialBold_copy_56: 6597244892235609435
+      PixelatedArialBold_copy_57: 8193777426139331676
+      PixelatedArialBold_copy_58: -5367624827448720414
+      PixelatedArialBold_copy_59: 2156616243235583181
+      PixelatedArialBold_copy_6: -142823360252566286
+      PixelatedArialBold_copy_60: 7728139438156984477
+      PixelatedArialBold_copy_61: -6257235704734097930
+      PixelatedArialBold_copy_62: 3755820469602532572
+      PixelatedArialBold_copy_63: 7871699267174822667
+      PixelatedArialBold_copy_64: 1839097047471185343
+      PixelatedArialBold_copy_65: 6878444752218470631
+      PixelatedArialBold_copy_66: -5830023279782779082
+      PixelatedArialBold_copy_67: -221914987568141594
+      PixelatedArialBold_copy_68: -6099994814602824480
+      PixelatedArialBold_copy_69: 3527790360731832362
+      PixelatedArialBold_copy_7: 6376756251041113383
+      PixelatedArialBold_copy_70: -8336668699655206349
+      PixelatedArialBold_copy_71: -5112005202707597544
+      PixelatedArialBold_copy_72: 3221648469727443043
+      PixelatedArialBold_copy_73: 5461431159367424498
+      PixelatedArialBold_copy_74: 4506327916990262472
+      PixelatedArialBold_copy_75: 8578567415190461545
+      PixelatedArialBold_copy_76: -2010694154890023958
+      PixelatedArialBold_copy_77: -6710397102674017993
+      PixelatedArialBold_copy_78: -6959113121047293927
+      PixelatedArialBold_copy_79: 7986074063182053201
+      PixelatedArialBold_copy_8: 3164162472009248596
+      PixelatedArialBold_copy_80: 4305580316201436060
+      PixelatedArialBold_copy_81: 1732770985218873091
+      PixelatedArialBold_copy_82: -6776481551558115976
+      PixelatedArialBold_copy_83: -3566395992678812329
+      PixelatedArialBold_copy_84: -9015507781826327588
+      PixelatedArialBold_copy_85: -5468551599601393908
+      PixelatedArialBold_copy_86: 8206161201700370733
+      PixelatedArialBold_copy_87: -5271885719383343870
+      PixelatedArialBold_copy_88: 6918336695838171374
+      PixelatedArialBold_copy_89: -7129075511882670981
+      PixelatedArialBold_copy_9: -1715955042226203842
+      PixelatedArialBold_copy_90: -799455392728466314
+      PixelatedArialBold_copy_91: -1960185790842499053
+      PixelatedArialBold_copy_92: -1833284174206582159
+      PixelatedArialBold_copy_93: 5833373727763871775
+      PixelatedArialBold_copy_94: 5356337075908942288
+      PixelatedArialBold_copy_95: -371142604732604703
+      PixelatedArialBold_copy_96: 159774388427714806
+      PixelatedArialBold_copy_97: -5515386663022549061
+      PixelatedArialBold_copy_98: -2846245400674123845
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

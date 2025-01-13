@@ -23,6 +23,7 @@ class FruitSpawnerController : MonoBehaviour
     RaycastManager RaycastManager;
 
     int nextFruitIndex;
+    bool fruitDropped = false;
 
     private void Start()
     {
@@ -43,10 +44,14 @@ class FruitSpawnerController : MonoBehaviour
     {
         if (GameController.OnGame)
         {
-            if (Input.touchCount > 0)
+            if (Input.touchCount > 0 && !fruitDropped)
             {
                 Touch touch = Input.GetTouch(0);
-                if (touch.phase == TouchPhase.Ended) StartCoroutine(SpawnFruit());
+                if (touch.phase == TouchPhase.Ended) 
+                {
+                    fruitDropped = true;
+                    StartCoroutine(SpawnFruit()); 
+                }
             }
 
             if (RaycastManager.IsColliding(Distance, CollisionTime, StartPosition, LayerMask)) HeightController.SetActive(true);
@@ -58,6 +63,8 @@ class FruitSpawnerController : MonoBehaviour
     {
         yield return new WaitForSeconds(0.5f);
 
+        Debug.Log("alo");
+        fruitDropped = false;
         IndicatorController.SetActive(true);
         IndicatorController.transform.position = Vector2.zero;
 
