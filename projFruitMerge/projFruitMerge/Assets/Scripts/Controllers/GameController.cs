@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using UnityEngine;
 
 public class GameController : MonoBehaviour
@@ -7,9 +8,12 @@ public class GameController : MonoBehaviour
     [SerializeField] GameObject PointText;
     [SerializeField] GameObject BestScoreText;
     [SerializeField] GameObject NewText;
+    [SerializeField] LanguageController LanguageController;
+
     [SerializeField] ParallaxController PointUI;
     [SerializeField] ParallaxController Dialog;
     [SerializeField] GameObject GameOver;
+    [SerializeField] GameObject Options;
 
     [Header("Game Over Position")]
     [SerializeField] Vector2 StartPosition;
@@ -26,6 +30,9 @@ public class GameController : MonoBehaviour
 
     private void Awake()
     {
+        LanguageController.Initialize();
+        LanguageController.Translate(LanguageController.GetLocalizationIndex());
+
         SQLiteManager.Initialize();
         object[] data = SQLiteManager.ReturnValues(CommonQuery.Select("*", "PLAYER"));
 
@@ -81,6 +88,10 @@ public class GameController : MonoBehaviour
     private void EndGame()
     {
         OnGame = false;
+
+        Options.SetActive(false);
+        GameOver.SetActive(true);
+
         Dialog.Moving = true;
         PointUI.Moving = true;
 
@@ -93,5 +104,30 @@ public class GameController : MonoBehaviour
         TextManager.SetText(BestScoreText, Player.BestScore);
 
         SaveGame();
+    }
+
+    public void Pause()
+    {
+        OnGame = false;
+
+        Options.SetActive(true);
+        GameOver.SetActive(false);
+
+        Dialog.Moving = true;
+    }
+
+    public void Unpause()
+    {
+        var rt = Dialog.GetComponent<RectTransform>();
+        rt.anchoredPosition = new Vector2 (0, -397);
+
+        Dialog.Moving = false;
+        StartCoroutine(WaitUntilNextFrame());
+    }
+
+    IEnumerator WaitUntilNextFrame()
+    {
+        yield return new WaitForEndOfFrame();
+        OnGame = true;
     }
 }

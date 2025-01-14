@@ -66,7 +66,7 @@
 				{
 					"directoryIndex" : 1,
 					"id" : "swappywrapper::@7e25bd1f32ce224db4e9",
-					"jsonFile" : "target-swappywrapper-RelWithDebInfo-834596ae500b57d25eb7.json",
+					"jsonFile" : "target-swappywrapper-RelWithDebInfo-a75414e56cad5e0cb1da.json",
 					"name" : "swappywrapper",
 					"projectIndex" : 1
 				}
@@ -77,7 +77,7 @@
 	"paths" : 
 	{
 		"build" : "C:/Users/ltbla/desktop/LTB Marketing Digital/Pessoal/Projetos/projFruitMerge/projFruitMerge/projFruitMerge/.utmp/RelWithDebInfo/4w3g4oy3/armeabi-v7a",
-		"source" : "C:/Users/ltbla/desktop/LTB Marketing Digital/Pessoal/Projetos/projFruitMerge/projFruitMerge/projFruitMerge/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/cpp"
+		"source" : "C:/Users/ltbla/desktop/LTB Marketing Digital/Pessoal/Projetos/projFruitMerge/projFruitMerge/projFruitMerge/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/src/main/cpp"
 	},
 	"version" : 
 	{

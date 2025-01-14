@@ -49,7 +49,7 @@ class DatabaseSynchronizer
             (
                 "PLAYER",
                 "BEST_SCORE, SOUNDS, MUSICS, LANGUAGE",
-                "0, 1, 1, 0"
+                $"0, 1, 1, 0"
             )
         );
         #endregion

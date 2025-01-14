@@ -1,15 +1,22 @@
 ﻿using System;
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 class FruitSpawnerController : MonoBehaviour
 {
     [Header("Prefabs")]
     [SerializeField] GameObject IndicatorController;
     [SerializeField] GameObject HeightController;
-    [SerializeField] SpriteRenderer Renderer;
+
+    [SerializeField] GameObject Renderer;
+
     [SerializeField] CameraShakeController CameraShakeController;
     [SerializeField] GameController GameController;
+
+    [SerializeField] GameObject Canvas;
 
     [SerializeField] System.Collections.Generic.List<GameObject> Fruits;
     [SerializeField] System.Collections.Generic.List<Sprite> SpritesFruits;
@@ -21,21 +28,27 @@ class FruitSpawnerController : MonoBehaviour
     [SerializeField] float CollisionTime;
 
     RaycastManager RaycastManager;
+    private GraphicRaycaster graphicRaycaster;
+    private EventSystem eventSystem;
 
     int nextFruitIndex;
     bool fruitDropped = false;
 
     private void Start()
     {
+        graphicRaycaster = Canvas.GetComponent<GraphicRaycaster>();
+        eventSystem = EventSystem.current;
+
         IndicatorController.SetActive(true);
         var go = Instantiate(RandomManager.GetRandomObject<GameObject>(Fruits), transform);
         var fc = go.GetComponent<FruitController>();
 
         fc.CameraShakeController = CameraShakeController;
         fc.GameController = GameController;
+        fc.Canvas = Canvas;
 
         nextFruitIndex = RandomManager.GetRandomIndex(SpritesFruits.Count);
-        Renderer.sprite = SpritesFruits[nextFruitIndex];
+        ImageManager.SetImage(Renderer, SpritesFruits[nextFruitIndex]);
 
         RaycastManager = new RaycastManager();
     }
@@ -47,7 +60,7 @@ class FruitSpawnerController : MonoBehaviour
             if (Input.touchCount > 0 && !fruitDropped)
             {
                 Touch touch = Input.GetTouch(0);
-                if (touch.phase == TouchPhase.Ended) 
+                if (touch.phase == TouchPhase.Ended && !IsTouchingUIElement(touch)) 
                 {
                     fruitDropped = true;
                     StartCoroutine(SpawnFruit()); 
@@ -63,7 +76,6 @@ class FruitSpawnerController : MonoBehaviour
     {
         yield return new WaitForSeconds(0.5f);
 
-        Debug.Log("alo");
         fruitDropped = false;
         IndicatorController.SetActive(true);
         IndicatorController.transform.position = Vector2.zero;
@@ -73,8 +85,24 @@ class FruitSpawnerController : MonoBehaviour
 
         fc.CameraShakeController = CameraShakeController;
         fc.GameController = GameController;
+        fc.Canvas = Canvas;
 
         nextFruitIndex = RandomManager.GetRandomIndex(SpritesFruits.Count);
-        Renderer.sprite = SpritesFruits[nextFruitIndex];
+        ImageManager.SetImage(Renderer, SpritesFruits[nextFruitIndex]);
+    }
+
+    private bool IsTouchingUIElement(Touch touch)
+    {
+        PointerEventData pointerEventData = new PointerEventData(eventSystem)
+        {
+            position = touch.position
+        };
+
+        List<RaycastResult> results = new List<RaycastResult>();
+        graphicRaycaster.Raycast(pointerEventData, results);
+
+        if (results.Count > 0) return true;
+
+        return false;
     }
 }

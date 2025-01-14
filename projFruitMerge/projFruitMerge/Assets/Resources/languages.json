@@ -1,0 +1,40 @@
+{
+  "0": {
+    "NextText": "Próximo",
+    "SettingsText": "Opções",
+    "BestScoreText": "Recorde:",
+    "ActualPositionText": "Sua Posição:",
+    "RankingText": "Ranking",
+    "PlayGameText": "Jogar Novamente",
+    "TitleText": "Opções",
+    "SoundsText": "Sons:",
+    "MusicsText": "Músicas:",
+    "LanguageText": "Linguagem:",
+    "RespectiveLanguage": "Português",
+    "CreditsText": "Créditos:",
+    "DeveloperText": "Desenvolvedor: Enrisco",
+    "ArtistText": "Artista: Enrisco",
+    "AudioText": "Áudios: Everton Rodrigues",
+    "DistribuitionText": "Distribuição: Cyborg Rooster",
+    "BackToMainText": "Voltar Para o Menu"
+  },
+  "1": {
+    "NextText": "Next",
+    "SettingsText": "Settings",
+    "BestScoreText": "Best Score:",
+    "ActualPositionText": "Your Position:",
+    "RankingText": "Ranking",
+    "PlayGameText": "Play Again",
+    "TitleText": "Settings",
+    "SoundsText": "Sounds:",
+    "MusicsText": "Music:",
+    "LanguageText": "Language:",
+    "RespectiveLanguage": "English",
+    "CreditsText": "Credits:",
+    "DeveloperText": "Developer: Enrisco",
+    "ArtistText": "Artist: Enrisco",
+    "AudioText": "Audio: Everton Rodrigues",
+    "DistribuitionText": "Distribution: Cyborg Rooster",
+    "BackToMainText": "Back to Menu"
+  }
+}
