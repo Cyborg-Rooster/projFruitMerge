@@ -104,4 +104,11 @@ public class FruitController : MonoBehaviour
         onGame = true;
         GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
     }
+
+    public void SetObjectsFromParent(CameraShakeController cameraShakeController, GameController gameController, GameObject canvas)
+    {
+        CameraShakeController = cameraShakeController;
+        GameController = gameController;
+        Canvas = canvas;
+    }
 }

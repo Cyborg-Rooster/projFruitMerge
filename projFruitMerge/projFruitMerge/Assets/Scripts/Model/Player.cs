@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-class Player
+static class Player
 {
-    public int BestScore;
-    public int Sounds;
-    public int Musics;
-    public int Language;
+    public static int BestScore;
+    public static int Sounds;
+    public static int Musics;
+    public static int Language;
 }

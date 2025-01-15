@@ -14,6 +14,8 @@ public class GameController : MonoBehaviour
     [SerializeField] ParallaxController Dialog;
     [SerializeField] GameObject GameOver;
     [SerializeField] GameObject Options;
+    [SerializeField] ToggleController SoundsToggle;
+    [SerializeField] ToggleController MusicsToggle;
 
     [Header("Game Over Position")]
     [SerializeField] Vector2 StartPosition;
@@ -22,7 +24,6 @@ public class GameController : MonoBehaviour
     [SerializeField] int Time;
 
     RaycastManager RaycastManager;
-    Player Player;
 
     public int Points;
 
@@ -30,23 +31,32 @@ public class GameController : MonoBehaviour
 
     private void Awake()
     {
+        int l = LanguageController.GetLocalizationIndex();
         LanguageController.Initialize();
-        LanguageController.Translate(LanguageController.GetLocalizationIndex());
 
-        SQLiteManager.Initialize();
-        object[] data = SQLiteManager.ReturnValues(CommonQuery.Select("*", "PLAYER"));
+        Player.BestScore = 0;
+        Player.Sounds = 1;
+        Player.Musics = 1;
+        Player.Language = l;
 
-        Player = new Player()
+        if (SQLiteManager.Initialize())
         {
-            BestScore = Convert.ToInt32(data[0]),
-            Sounds = Convert.ToInt32(data[1]),
-            Musics = Convert.ToInt32(data[2]),
-            Language = Convert.ToInt32(data[3])
-        };
+            object[] data = SQLiteManager.ReturnValues(CommonQuery.Select("*", "PLAYER"));
+
+            Player.BestScore = Convert.ToInt32(data[0]);
+            Player.Sounds = Convert.ToInt32(data[1]);
+            Player.Musics = Convert.ToInt32(data[2]);
+            Player.Language = Convert.ToInt32(data[3]);
+        }
+
+        LanguageController.Translate(Player.Language);
     }
 
     private void Start()
     {
+        if(Player.Sounds == 0) SoundsToggle.Turn();
+        if (Player.Musics == 0) MusicsToggle.Turn();
+
         RaycastManager = new RaycastManager();
     }
 
@@ -56,17 +66,6 @@ public class GameController : MonoBehaviour
         {
             EndGame();
         }
-    }
-
-    public void AddPoints(int points)
-    {
-        Points += points;
-        TextManager.SetText(PointText, Points);
-    }
-
-    public void Restart()
-    {
-        SceneLoaderManager.LoadScene(0);
     }
 
     private void SaveGame()
@@ -106,6 +105,12 @@ public class GameController : MonoBehaviour
         SaveGame();
     }
 
+    IEnumerator WaitUntilNextFrame()
+    {
+        yield return new WaitForEndOfFrame();
+        OnGame = true;
+    }
+
     public void Pause()
     {
         OnGame = false;
@@ -122,12 +127,46 @@ public class GameController : MonoBehaviour
         rt.anchoredPosition = new Vector2 (0, -397);
 
         Dialog.Moving = false;
+        SaveGame();
         StartCoroutine(WaitUntilNextFrame());
     }
 
-    IEnumerator WaitUntilNextFrame()
+    public void SetMusicsOn(ToggleController MusicsToggle)
     {
-        yield return new WaitForEndOfFrame();
-        OnGame = true;
+        Player.Musics = MusicsToggle.On ? 1 : 0;
+        Debug.Log(Player.Musics);
+    }
+
+    public void SetSoundsOn(ToggleController SoundsToggle)
+    {
+        Player.Sounds = SoundsToggle.On ? 1 : 0;
+        Debug.Log(Player.Sounds);
+    }
+
+    public void ChangeLanguage(bool ascending)
+    {
+        if (ascending)
+        {
+            Player.Language++;
+            if (Player.Language > LanguageController.GetLanguageLenght()) Player.Language = 0;
+        }
+        else
+        {
+            Player.Language--;
+            if (Player.Language < 0) Player.Language = LanguageController.GetLanguageLenght();
+        }
+
+        LanguageController.Translate(Player.Language);
+    }
+
+    public void AddPoints(int points)
+    {
+        Points += points;
+        TextManager.SetText(PointText, Points);
+    }
+
+    public void Restart()
+    {
+        SceneLoaderManager.LoadScene(0);
     }
 }

@@ -1,8 +1,11 @@
 using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class ToggleController : MonoBehaviour
 {
+    [SerializeField] UnityEvent onCustomEvent;
 
     public bool On;
 
@@ -23,8 +26,18 @@ public class ToggleController : MonoBehaviour
 
     private void OnMouseDown()
     {
+        Turn();
+    }
+
+    public void Turn()
+    {
         if (On) StartCoroutine(TurnOff());
         else StartCoroutine(TurnOn());
+    }
+
+    public void TriggerEvent()
+    {
+        onCustomEvent?.Invoke();
     }
 
     IEnumerator TurnOn()
@@ -35,7 +48,9 @@ public class ToggleController : MonoBehaviour
         yield return new WaitForSeconds(0.3f);
 
         On = true;
-        Animator.speed = 0;    
+        Animator.speed = 0;   
+        
+        TriggerEvent();
     }
 
     IEnumerator TurnOff()
@@ -47,5 +62,7 @@ public class ToggleController : MonoBehaviour
 
         On = false;
         Animator.speed = 0;
+
+        TriggerEvent();
     }
 }

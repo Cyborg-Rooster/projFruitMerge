@@ -14,7 +14,6 @@ class SQLiteManager
     {
         Directory.CreateDirectory($@"{Application.persistentDataPath}\Database\");
         Database = new SqliteConnection(new SqliteConnection("URI=file:" + Connection));
-        SetDatabaseActive(true);
 
         bool databaseExist = int.Parse(ReturnValueAsString(CommonQuery.Select("COUNT(*)", "SQLITE_MASTER"))) > 0;
 
@@ -25,28 +24,36 @@ class SQLiteManager
 
     public static void RunQuery(string query)
     {
+        SetDatabaseActive(true);
         IDbCommand cmd;
 
         cmd = Database.CreateCommand();
         cmd.CommandText = query;
         cmd.ExecuteReader();
+
+        SetDatabaseActive(false);
     }
 
     public static string ReturnValueAsString(string query)
     {
-        IDbCommand cmd;
-        IDataReader reader;
-
-        cmd = Database.CreateCommand();
-
+        SetDatabaseActive(true);
+        IDbCommand cmd = Database.CreateCommand();
         cmd.CommandText = query;
-        reader = cmd.ExecuteReader();
 
-        return reader[0].ToString();
+        string r;
+
+        using (IDataReader reader = cmd.ExecuteReader())
+        {
+            r = reader[0].ToString();
+        }
+
+        SetDatabaseActive(false);
+        return r;
     }
 
     public static object[] ReturnValues(string query)
     {
+        SetDatabaseActive(true);
         IDbCommand cmd = Database.CreateCommand();
         cmd.CommandText = query;
 
@@ -60,20 +67,27 @@ class SQLiteManager
             }
         }
 
-        return result.ToArray();
+        var r = result.ToArray();
+        SetDatabaseActive(false);
+        return r;
     }
 
     public static int ReturnValueAsInt(string query)
     {
+        SetDatabaseActive(true);
         IDbCommand cmd;
-        IDataReader reader;
-
         cmd = Database.CreateCommand();
-
         cmd.CommandText = query;
-        reader = cmd.ExecuteReader();
 
-        return Convert.ToInt32(reader[0]);
+        int r;
+
+        using (IDataReader reader = cmd.ExecuteReader())
+        {
+            r = Convert.ToInt32(reader[0]);
+        }
+
+        SetDatabaseActive(false);
+        return r;
     }
 
     public static void SetDatabaseActive(bool active)

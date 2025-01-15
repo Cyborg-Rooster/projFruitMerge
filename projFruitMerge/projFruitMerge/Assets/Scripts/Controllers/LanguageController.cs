@@ -63,7 +63,13 @@ class LanguageController : MonoBehaviour
     public int GetLocalizationIndex()
     {
         CultureInfo cultureInfo = CultureInfo.CurrentCulture;
+
         if (cultureInfo.Name.Equals("pt-BR", System.StringComparison.OrdinalIgnoreCase)) return 0;
         else return 1;
+    }
+
+    public int GetLanguageLenght()
+    {
+        return bruteValues.Count - 1;
     }
 }

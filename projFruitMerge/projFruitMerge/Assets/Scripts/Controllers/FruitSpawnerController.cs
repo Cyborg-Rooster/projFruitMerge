@@ -43,9 +43,7 @@ class FruitSpawnerController : MonoBehaviour
         var go = Instantiate(RandomManager.GetRandomObject<GameObject>(Fruits), transform);
         var fc = go.GetComponent<FruitController>();
 
-        fc.CameraShakeController = CameraShakeController;
-        fc.GameController = GameController;
-        fc.Canvas = Canvas;
+        fc.SetObjectsFromParent(CameraShakeController, GameController, Canvas);
 
         nextFruitIndex = RandomManager.GetRandomIndex(SpritesFruits.Count);
         ImageManager.SetImage(Renderer, SpritesFruits[nextFruitIndex]);
@@ -83,9 +81,7 @@ class FruitSpawnerController : MonoBehaviour
         var go = Instantiate(Fruits[nextFruitIndex], transform);
         var fc = go.GetComponent<FruitController>();
 
-        fc.CameraShakeController = CameraShakeController;
-        fc.GameController = GameController;
-        fc.Canvas = Canvas;
+        fc.SetObjectsFromParent(CameraShakeController, GameController, Canvas);
 
         nextFruitIndex = RandomManager.GetRandomIndex(SpritesFruits.Count);
         ImageManager.SetImage(Renderer, SpritesFruits[nextFruitIndex]);

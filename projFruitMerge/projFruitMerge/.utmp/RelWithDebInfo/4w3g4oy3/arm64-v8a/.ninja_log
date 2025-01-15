@@ -1,5 +1,5 @@
 # ninja log v5
-1	636	7585623656802211	FramePacing/CMakeFiles/swappywrapper.dir/UnitySwappyWrapper.cpp.o	dd978be1fbec1c32
-638	765	7585623658119477	C:/Users/ltbla/desktop/LTB Marketing Digital/Pessoal/Projetos/projFruitMerge/projFruitMerge/projFruitMerge/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/4w3g4oy3/obj/arm64-v8a/libswappywrapper.so	ecfdc4118bd2421c
-4	279	7585631362236267	FramePacing/CMakeFiles/swappywrapper.dir/UnitySwappyWrapper.cpp.o	dd978be1fbec1c32
-279	475	7585631364260196	C:/Users/ltbla/desktop/LTB Marketing Digital/Pessoal/Projetos/projFruitMerge/projFruitMerge/projFruitMerge/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/4w3g4oy3/obj/arm64-v8a/libswappywrapper.so	ecfdc4118bd2421c
+8	691	7586743112559529	FramePacing/CMakeFiles/swappywrapper.dir/UnitySwappyWrapper.cpp.o	dd978be1fbec1c32
+691	1116	7586743116829875	C:/Users/ltbla/desktop/LTB Marketing Digital/Pessoal/Projetos/projFruitMerge/projFruitMerge/projFruitMerge/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/4w3g4oy3/obj/arm64-v8a/libswappywrapper.so	ecfdc4118bd2421c
+7	218	7586744254513922	FramePacing/CMakeFiles/swappywrapper.dir/UnitySwappyWrapper.cpp.o	dd978be1fbec1c32
+219	416	7586744256568119	C:/Users/ltbla/desktop/LTB Marketing Digital/Pessoal/Projetos/projFruitMerge/projFruitMerge/projFruitMerge/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/4w3g4oy3/obj/arm64-v8a/libswappywrapper.so	ecfdc4118bd2421c
