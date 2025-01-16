@@ -46,7 +46,7 @@ class FruitSpawnerController : MonoBehaviour
         fc.SetObjectsFromParent(CameraShakeController, GameController, Canvas);
 
         nextFruitIndex = RandomManager.GetRandomIndex(SpritesFruits.Count);
-        ImageManager.SetImage(Renderer, SpritesFruits[nextFruitIndex]);
+        UIManager.SetImage(Renderer, SpritesFruits[nextFruitIndex]);
 
         RaycastManager = new RaycastManager();
     }
@@ -84,7 +84,7 @@ class FruitSpawnerController : MonoBehaviour
         fc.SetObjectsFromParent(CameraShakeController, GameController, Canvas);
 
         nextFruitIndex = RandomManager.GetRandomIndex(SpritesFruits.Count);
-        ImageManager.SetImage(Renderer, SpritesFruits[nextFruitIndex]);
+        UIManager.SetImage(Renderer, SpritesFruits[nextFruitIndex]);
     }
 
     private bool IsTouchingUIElement(Touch touch)

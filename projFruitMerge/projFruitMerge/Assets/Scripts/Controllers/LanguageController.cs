@@ -40,23 +40,23 @@ class LanguageController : MonoBehaviour
     {
         GameText gameText = bruteValues[index.ToString()];
 
-        TextManager.SetText(nextText, gameText.NextText);
-        TextManager.SetText(settingsText, gameText.SettingsText);
-        TextManager.SetText(bestScoreText, gameText.BestScoreText);
-        TextManager.SetText(actualPositionText, gameText.ActualPositionText);
-        TextManager.SetText(rankingText, gameText.RankingText);
-        TextManager.SetText(playGameText, gameText.PlayGameText);
-        TextManager.SetText(titleText, gameText.TitleText);
-        TextManager.SetText(soundsText, gameText.SoundsText);
-        TextManager.SetText(musicsText, gameText.MusicsText);
-        TextManager.SetText(languageText, gameText.LanguageText);
-        TextManager.SetText(respectiveLanguage, gameText.RespectiveLanguage);
-        TextManager.SetText(creditsText, gameText.CreditsText);
-        TextManager.SetText(developerText, gameText.DeveloperText);
-        TextManager.SetText(artistText, gameText.ArtistText);
-        TextManager.SetText(audioText, gameText.AudioText);
-        TextManager.SetText(distribuitionText, gameText.DistribuitionText);
-        TextManager.SetText(backToMainText, gameText.BackToMainText);
+        UIManager.SetText(nextText, gameText.NextText);
+        UIManager.SetText(settingsText, gameText.SettingsText);
+        UIManager.SetText(bestScoreText, gameText.BestScoreText);
+        UIManager.SetText(actualPositionText, gameText.ActualPositionText);
+        UIManager.SetText(rankingText, gameText.RankingText);
+        UIManager.SetText(playGameText, gameText.PlayGameText);
+        UIManager.SetText(titleText, gameText.TitleText);
+        UIManager.SetText(soundsText, gameText.SoundsText);
+        UIManager.SetText(musicsText, gameText.MusicsText);
+        UIManager.SetText(languageText, gameText.LanguageText);
+        UIManager.SetText(respectiveLanguage, gameText.RespectiveLanguage);
+        UIManager.SetText(creditsText, gameText.CreditsText);
+        UIManager.SetText(developerText, gameText.DeveloperText);
+        UIManager.SetText(artistText, gameText.ArtistText);
+        UIManager.SetText(audioText, gameText.AudioText);
+        UIManager.SetText(distribuitionText, gameText.DistribuitionText);
+        UIManager.SetText(backToMainText, gameText.BackToMainText);
 
     }
 

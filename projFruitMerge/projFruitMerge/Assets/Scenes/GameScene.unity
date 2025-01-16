@@ -546,6 +546,7 @@ GameObject:
   - component: {fileID: 155598762}
   - component: {fileID: 155598764}
   - component: {fileID: 155598761}
+  - component: {fileID: 155598765}
   m_Layer: 5
   m_Name: SettingsButton
   m_TagString: Untagged
@@ -695,6 +696,23 @@ MonoBehaviour:
   NormalSprite: {fileID: -8603029737976452393, guid: 23ed2a8d1301215498c23d15746002a7, type: 3}
   PressedSprite: {fileID: -1447681583, guid: 23ed2a8d1301215498c23d15746002a7, type: 3}
   TimePressing: 0.1
+--- !u!114 &155598765
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 155598759}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c72322888b7e744ba8ea0309741b7df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StartPos: {x: -72.3, y: 0}
+  EndPos: {x: -72.3, y: 90}
+  Speed: 800
+  IsParallax: 0
+  Moving: 0
 --- !u!1 &183843185
 GameObject:
   m_ObjectHideFlags: 0
@@ -706,6 +724,7 @@ GameObject:
   - component: {fileID: 183843186}
   - component: {fileID: 183843188}
   - component: {fileID: 183843187}
+  - component: {fileID: 183843189}
   m_Layer: 5
   m_Name: NextButton
   m_TagString: Untagged
@@ -772,6 +791,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 183843185}
   m_CullTransparentMesh: 1
+--- !u!114 &183843189
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 183843185}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c72322888b7e744ba8ea0309741b7df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StartPos: {x: 72.3, y: 0}
+  EndPos: {x: 72.3, y: 90}
+  Speed: 800
+  IsParallax: 0
+  Moving: 0
 --- !u!1 &210281819
 GameObject:
   m_ObjectHideFlags: 0
@@ -1234,6 +1270,54 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 448100182}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &501448565
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 501448567}
+  - component: {fileID: 501448566}
+  m_Layer: 0
+  m_Name: AdsInitializer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &501448566
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 501448565}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7ffb6e38f73c664ca22cbabeae78ceb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _androidGameId: 5777522
+  _iOSGameId: 5777523
+  _testMode: 1
+  Initialized: 0
+--- !u!4 &501448567
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 501448565}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -2329,16 +2413,21 @@ MonoBehaviour:
   LanguageController: {fileID: 1988451838}
   PointUI: {fileID: 245419605}
   Dialog: {fileID: 780151547}
+  NextUI: {fileID: 183843189}
+  OptionsUI: {fileID: 155598765}
   GameOver: {fileID: 110981149}
   Options: {fileID: 1122132894}
   SoundsToggle: {fileID: 908225401}
   MusicsToggle: {fileID: 1374238826}
+  BannerAdsController: {fileID: 1422578673}
+  InterstitialAdsController: {fileID: 1422578675}
+  AdsInitializer: {fileID: 501448566}
   StartPosition: {x: -1, y: 1.1}
   LayerMask:
     serializedVersion: 2
     m_Bits: 8
   Distance: 2
-  Time: 5
+  Time: 3
   Points: 0
   OnGame: 1
 --- !u!4 &1015418389
@@ -3235,6 +3324,69 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8be8e1602977520499448683a778c408, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1422578672
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1422578674}
+  - component: {fileID: 1422578673}
+  - component: {fileID: 1422578675}
+  m_Layer: 0
+  m_Name: AdsController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1422578673
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1422578672}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b327bbeac2568ab4baff464ada0bd97f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AndroidAdBannerId: Banner_Android
+  AndroidAdInterstitialId: Interstitial_Android
+--- !u!4 &1422578674
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1422578672}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1422578675
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1422578672}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b59aa6e43ba9214f999060b12d6be17, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AndroidAdUnitId: Interstitial_Android
+  iOsAdUnitId: Interstitial_iOS
+  GameController: {fileID: 1015418388}
+  AdInterstitialLoaded: 0
 --- !u!1 &1551242240
 GameObject:
   m_ObjectHideFlags: 0
@@ -5132,3 +5284,5 @@ SceneRoots:
   - {fileID: 1015418389}
   - {fileID: 1033354841}
   - {fileID: 448100185}
+  - {fileID: 501448567}
+  - {fileID: 1422578674}

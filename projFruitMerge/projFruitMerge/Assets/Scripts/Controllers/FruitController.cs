@@ -19,12 +19,7 @@ public class FruitController : MonoBehaviour
 
     bool collided;
     bool onGame;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        graphicRaycaster = Canvas.GetComponent<GraphicRaycaster>();
-        eventSystem = EventSystem.current;
-    }
+
 
     // Update is called once per frame
     void Update()
@@ -110,5 +105,8 @@ public class FruitController : MonoBehaviour
         CameraShakeController = cameraShakeController;
         GameController = gameController;
         Canvas = canvas;
+
+        graphicRaycaster = Canvas.GetComponent<GraphicRaycaster>();
+        eventSystem = EventSystem.current;
     }
 }

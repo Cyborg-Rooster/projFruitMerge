@@ -19,8 +19,8 @@ class ButtonImageController : MonoBehaviour
 
     IEnumerator ChangeSpriteForTime()
     {
-        ImageManager.SetImage(gameObject, PressedSprite);
+        UIManager.SetImage(gameObject, PressedSprite);
         yield return new WaitForSeconds(TimePressing);
-        ImageManager.SetImage(gameObject, NormalSprite);
+        UIManager.SetImage(gameObject, NormalSprite);
     }
 }

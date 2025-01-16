@@ -8,14 +8,28 @@ public class GameController : MonoBehaviour
     [SerializeField] GameObject PointText;
     [SerializeField] GameObject BestScoreText;
     [SerializeField] GameObject NewText;
+
+    [Space()]
     [SerializeField] LanguageController LanguageController;
 
+    [Space()]
     [SerializeField] ParallaxController PointUI;
     [SerializeField] ParallaxController Dialog;
+    [SerializeField] ParallaxController NextUI;
+    [SerializeField] ParallaxController OptionsUI;
+
+    [Space()]
     [SerializeField] GameObject GameOver;
     [SerializeField] GameObject Options;
+
+    [Space()]
     [SerializeField] ToggleController SoundsToggle;
     [SerializeField] ToggleController MusicsToggle;
+
+    [Header("Unity Ads")]
+    [SerializeField] BannerAdsController BannerAdsController;
+    [SerializeField] InterstitialAdsController InterstitialAdsController;
+    [SerializeField] AdsInitializer AdsInitializer;
 
     [Header("Game Over Position")]
     [SerializeField] Vector2 StartPosition;
@@ -33,6 +47,7 @@ public class GameController : MonoBehaviour
     {
         int l = LanguageController.GetLocalizationIndex();
         LanguageController.Initialize();
+        //AdsInitializer.InitializeAds();
 
         Player.BestScore = 0;
         Player.Sounds = 1;
@@ -58,6 +73,23 @@ public class GameController : MonoBehaviour
         if (Player.Musics == 0) MusicsToggle.Turn();
 
         RaycastManager = new RaycastManager();
+        //StartCoroutine(WaitUntilAdLoad());
+        //InterstitialAdsController.LoadAd();
+
+        StartCoroutine(WaitUntilInit());
+    }
+
+    IEnumerator WaitUntilInit()
+    {
+        yield return AdsInitializer.WaitUntilInit();
+        yield return WaitUntilAdLoad();
+
+        InterstitialAdsController.LoadAd();
+    }
+
+    IEnumerator WaitUntilAdLoad()
+    {
+        yield return BannerAdsController.WaitUntilBannerLoad();
     }
 
     private void Update()
@@ -93,6 +125,10 @@ public class GameController : MonoBehaviour
 
         Dialog.Moving = true;
         PointUI.Moving = true;
+        NextUI.Moving = true;
+        OptionsUI.Moving = true;
+
+        UIManager.SetButtonEnable(OptionsUI.gameObject, false);
 
         if (Player.BestScore < Points)
         { 
@@ -100,7 +136,7 @@ public class GameController : MonoBehaviour
             NewText.SetActive(true);
         }
 
-        TextManager.SetText(BestScoreText, Player.BestScore);
+        UIManager.SetText(BestScoreText, Player.BestScore);
 
         SaveGame();
     }
@@ -134,13 +170,11 @@ public class GameController : MonoBehaviour
     public void SetMusicsOn(ToggleController MusicsToggle)
     {
         Player.Musics = MusicsToggle.On ? 1 : 0;
-        Debug.Log(Player.Musics);
     }
 
     public void SetSoundsOn(ToggleController SoundsToggle)
     {
         Player.Sounds = SoundsToggle.On ? 1 : 0;
-        Debug.Log(Player.Sounds);
     }
 
     public void ChangeLanguage(bool ascending)
@@ -162,10 +196,16 @@ public class GameController : MonoBehaviour
     public void AddPoints(int points)
     {
         Points += points;
-        TextManager.SetText(PointText, Points);
+        UIManager.SetText(PointText, Points);
     }
 
     public void Restart()
+    {
+        if (InterstitialAdsController.AdInterstitialLoaded) InterstitialAdsController.ShowAd();
+        else SceneLoaderManager.LoadScene(0);
+    }
+
+    public void RealRestart()
     {
         SceneLoaderManager.LoadScene(0);
     }
