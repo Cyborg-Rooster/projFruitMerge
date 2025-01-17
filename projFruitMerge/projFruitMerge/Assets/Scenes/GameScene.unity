@@ -311,7 +311,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -41.79, y: 67.71}
+  m_AnchoredPosition: {x: -41.79, y: 63.08}
   m_SizeDelta: {x: 50.06, y: 16.11}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &75722597
@@ -710,7 +710,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   StartPos: {x: -72.3, y: 0}
   EndPos: {x: -72.3, y: 90}
-  Speed: 800
+  Speed: 150
   IsParallax: 0
   Moving: 0
 --- !u!1 &183843185
@@ -805,7 +805,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   StartPos: {x: 72.3, y: 0}
   EndPos: {x: 72.3, y: 90}
-  Speed: 800
+  Speed: 150
   IsParallax: 0
   Moving: 0
 --- !u!1 &210281819
@@ -917,7 +917,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 33.9, y: 67.710014}
+  m_AnchoredPosition: {x: 33.9, y: 63.08}
   m_SizeDelta: {x: 66.83, y: 16.11}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &245132019
@@ -1304,12 +1304,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 501448565}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f7ffb6e38f73c664ca22cbabeae78ceb, type: 3}
+  m_Script: {fileID: 11500000, guid: 7207d0e43f5442545b02a72ac57b0364, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _androidGameId: 5777522
-  _iOSGameId: 5777523
-  _testMode: 1
   Initialized: 0
 --- !u!4 &501448567
 Transform:
@@ -2378,6 +2375,129 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 967281400}
   m_CullTransparentMesh: 1
+--- !u!1 &990942568
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 990942572}
+  - component: {fileID: 990942571}
+  - component: {fileID: 990942570}
+  - component: {fileID: 990942569}
+  m_Layer: 0
+  m_Name: Transition
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &990942569
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 990942568}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d1bd8db7b79b484ba976428a0bcc491, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!95 &990942570
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 990942568}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f474d608b63e6e843a516cfdbbee6cce, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!212 &990942571
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 990942568}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: -1431549301
+  m_SortingLayer: 2
+  m_SortingOrder: 3
+  m_Sprite: {fileID: 4691209328771964438, guid: 39f45721a6b27124fa36b7d3964aa1fe, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 3.61, y: 5.59}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!4 &990942572
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 990942568}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1.2, y: 1.2, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1015418387
 GameObject:
   m_ObjectHideFlags: 0
@@ -2410,6 +2530,7 @@ MonoBehaviour:
   PointText: {fileID: 1216644986}
   BestScoreText: {fileID: 245132017}
   NewText: {fileID: 1680436304}
+  FadeController: {fileID: 990942569}
   LanguageController: {fileID: 1988451838}
   PointUI: {fileID: 245419605}
   Dialog: {fileID: 780151547}
@@ -2419,8 +2540,7 @@ MonoBehaviour:
   Options: {fileID: 1122132894}
   SoundsToggle: {fileID: 908225401}
   MusicsToggle: {fileID: 1374238826}
-  BannerAdsController: {fileID: 1422578673}
-  InterstitialAdsController: {fileID: 1422578675}
+  AdsController: {fileID: 1422578673}
   AdsInitializer: {fileID: 501448566}
   StartPosition: {x: -1, y: 1.1}
   LayerMask:
@@ -3334,7 +3454,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1422578674}
   - component: {fileID: 1422578673}
-  - component: {fileID: 1422578675}
   m_Layer: 0
   m_Name: AdsController
   m_TagString: Untagged
@@ -3351,11 +3470,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 1422578672}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b327bbeac2568ab4baff464ada0bd97f, type: 3}
+  m_Script: {fileID: 11500000, guid: 385e0f861ab9d6c4e8ddb8f32c8918b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AndroidAdBannerId: Banner_Android
-  AndroidAdInterstitialId: Interstitial_Android
+  AdBannerAndroid: ca-app-pub-3940256099942544/6300978111
+  AdBannerIos: ca-app-pub-3940256099942544/2934735716
+  AdIntersticialAndroid: ca-app-pub-3940256099942544/1033173712
+  AdIntersticialIOS: ca-app-pub-3940256099942544/4411468910
+  BannerLoaded: 0
+  IntersticialLoaded: 0
+  InterstitialClosed: 0
 --- !u!4 &1422578674
 Transform:
   m_ObjectHideFlags: 0
@@ -3371,22 +3495,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1422578675
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1422578672}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3b59aa6e43ba9214f999060b12d6be17, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  AndroidAdUnitId: Interstitial_Android
-  iOsAdUnitId: Interstitial_iOS
-  GameController: {fileID: 1015418388}
-  AdInterstitialLoaded: 0
 --- !u!1 &1551242240
 GameObject:
   m_ObjectHideFlags: 0
@@ -3986,8 +4094,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 47.58, y: 82.07}
-  m_SizeDelta: {x: 41.62, y: 16.28}
+  m_AnchoredPosition: {x: 34.195, y: 78.1}
+  m_SizeDelta: {x: 68.39, y: 16.28}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1680436306
 MonoBehaviour:
@@ -4023,7 +4131,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 0}
+    m_Font: {fileID: 12800000, guid: 825120e025c05f041a2f38eec4e52408, type: 2}
     m_FontSize: 16
     m_FontStyle: 0
     m_BestFit: 0
@@ -4923,6 +5031,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextText: {fileID: 928711874}
   settingsText: {fileID: 2052241708}
+  NewText: {fileID: 1680436304}
   bestScoreText: {fileID: 75722595}
   actualPositionText: {fileID: 587648038}
   rankingText: {fileID: 1813654166}
@@ -5286,3 +5395,4 @@ SceneRoots:
   - {fileID: 448100185}
   - {fileID: 501448567}
   - {fileID: 1422578674}
+  - {fileID: 990942572}

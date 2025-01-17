@@ -8,6 +8,7 @@ public class GameController : MonoBehaviour
     [SerializeField] GameObject PointText;
     [SerializeField] GameObject BestScoreText;
     [SerializeField] GameObject NewText;
+    [SerializeField] FadeController FadeController;
 
     [Space()]
     [SerializeField] LanguageController LanguageController;
@@ -27,8 +28,8 @@ public class GameController : MonoBehaviour
     [SerializeField] ToggleController MusicsToggle;
 
     [Header("Unity Ads")]
-    [SerializeField] BannerAdsController BannerAdsController;
-    [SerializeField] InterstitialAdsController InterstitialAdsController;
+    [SerializeField] AdsController AdsController;
+    //[SerializeField] InterstitialAdsController InterstitialAdsController;
     [SerializeField] AdsInitializer AdsInitializer;
 
     [Header("Game Over Position")]
@@ -47,7 +48,7 @@ public class GameController : MonoBehaviour
     {
         int l = LanguageController.GetLocalizationIndex();
         LanguageController.Initialize();
-        //AdsInitializer.InitializeAds();
+        StartCoroutine(WaitUntilInitialize());
 
         Player.BestScore = 0;
         Player.Sounds = 1;
@@ -67,29 +68,22 @@ public class GameController : MonoBehaviour
         LanguageController.Translate(Player.Language);
     }
 
+    IEnumerator WaitUntilInitialize()
+    {
+        AdsInitializer.Initialize();
+        yield return new WaitUntil(() => AdsInitializer.Initialized == true);
+        AdsController.LoadBanner();
+        AdsController.LoadInterstitialAd();
+    }
+
     private void Start()
     {
         if(Player.Sounds == 0) SoundsToggle.Turn();
         if (Player.Musics == 0) MusicsToggle.Turn();
 
         RaycastManager = new RaycastManager();
-        //StartCoroutine(WaitUntilAdLoad());
-        //InterstitialAdsController.LoadAd();
 
-        StartCoroutine(WaitUntilInit());
-    }
-
-    IEnumerator WaitUntilInit()
-    {
-        yield return AdsInitializer.WaitUntilInit();
-        yield return WaitUntilAdLoad();
-
-        InterstitialAdsController.LoadAd();
-    }
-
-    IEnumerator WaitUntilAdLoad()
-    {
-        yield return BannerAdsController.WaitUntilBannerLoad();
+        StartCoroutine(FadeController.FadeOut());
     }
 
     private void Update()
@@ -201,12 +195,21 @@ public class GameController : MonoBehaviour
 
     public void Restart()
     {
-        if (InterstitialAdsController.AdInterstitialLoaded) InterstitialAdsController.ShowAd();
-        else SceneLoaderManager.LoadScene(0);
+        StartCoroutine(WaitUntilCloseAd());
     }
 
-    public void RealRestart()
+    IEnumerator WaitUntilCloseAd()
     {
+        FadeController.gameObject.SetActive(true);
+        yield return FadeController.FadeIn();
+
+        if (AdsController.IntersticialLoaded)
+        {
+            AdsController.ShowInterstitialAd();
+            yield return new WaitUntil(() => AdsController.InterstitialClosed == true);
+        }
+
         SceneLoaderManager.LoadScene(0);
     }
+
 }

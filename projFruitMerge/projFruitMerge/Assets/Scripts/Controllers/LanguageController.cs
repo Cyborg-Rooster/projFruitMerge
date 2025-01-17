@@ -10,6 +10,7 @@ class LanguageController : MonoBehaviour
 {
     [SerializeField] private GameObject nextText;
     [SerializeField] private GameObject settingsText;
+    [SerializeField] private GameObject NewText;
     [SerializeField] private GameObject bestScoreText;
     [SerializeField] private GameObject actualPositionText;
     [SerializeField] private GameObject rankingText;
@@ -42,6 +43,7 @@ class LanguageController : MonoBehaviour
 
         UIManager.SetText(nextText, gameText.NextText);
         UIManager.SetText(settingsText, gameText.SettingsText);
+        UIManager.SetText(NewText, gameText.NewText);
         UIManager.SetText(bestScoreText, gameText.BestScoreText);
         UIManager.SetText(actualPositionText, gameText.ActualPositionText);
         UIManager.SetText(rankingText, gameText.RankingText);

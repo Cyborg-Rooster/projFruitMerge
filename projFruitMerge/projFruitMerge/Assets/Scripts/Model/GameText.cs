@@ -10,6 +10,7 @@ class GameText
 {
     public string NextText;
     public string SettingsText;
+    public string NewText;
     public string BestScoreText;
     public string ActualPositionText;
     public string RankingText;

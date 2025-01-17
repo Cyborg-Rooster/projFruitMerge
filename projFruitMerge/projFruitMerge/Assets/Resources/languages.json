@@ -2,6 +2,7 @@
   "0": {
     "NextText": "Próximo",
     "SettingsText": "Opções",
+    "NewText": "NOVO!",
     "BestScoreText": "Recorde:",
     "ActualPositionText": "Sua Posição:",
     "RankingText": "Ranking",
@@ -21,6 +22,7 @@
   "1": {
     "NextText": "Next",
     "SettingsText": "Settings",
+    "NewText": "NEW!",
     "BestScoreText": "Best Score:",
     "ActualPositionText": "Your Position:",
     "RankingText": "Ranking",

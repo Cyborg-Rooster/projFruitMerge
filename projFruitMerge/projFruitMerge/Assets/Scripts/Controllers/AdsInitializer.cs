@@ -1,46 +1,31 @@
-﻿using System.Collections;
+using GoogleMobileAds.Api;
+using System.Collections;
 using UnityEngine;
-using UnityEngine.Advertisements;
 
-public class AdsInitializer : MonoBehaviour, IUnityAdsInitializationListener
+public class AdsInitializer : MonoBehaviour
 {
-    [SerializeField] string _androidGameId;
-    [SerializeField] string _iOSGameId;
-    [SerializeField] bool _testMode = true;
-
-    private string _gameId;
-
     public bool Initialized;
-
-    public void InitializeAds()
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    void Start()
     {
-#if UNITY_IOS
-            _gameId = _iOSGameId;
-#elif UNITY_ANDROID
-        _gameId = _androidGameId;
-#elif UNITY_EDITOR
-            _gameId = _androidGameId; //Only for testing the functionality in the Editor
-#endif
-        if (!Advertisement.isInitialized && Advertisement.isSupported)
-        {
-            Advertisement.Initialize(_gameId, _testMode, this);
-        }
+        
     }
 
-    public void OnInitializationComplete()
+    // Update is called once per frame
+    void Update()
     {
+        
+    }
+
+    public void Initialize()
+    {
+        MobileAds.Initialize(HandleInitializationComplete);
+    }
+
+    void HandleInitializationComplete(InitializationStatus initStatus)
+    {
+        Debug.Log("AdMob foi inicializado com sucesso!");
         Initialized = true;
-        Debug.Log("Unity Ads initialization complete.");
     }
 
-    public void OnInitializationFailed(UnityAdsInitializationError error, string message)
-    {
-        Debug.Log($"Unity Ads Initialization Failed: {error.ToString()} - {message}");
-    }
-
-    public IEnumerator WaitUntilInit()
-    {
-        InitializeAds();
-        yield return new WaitUntil(() => Initialized == true);
-    }
 }
