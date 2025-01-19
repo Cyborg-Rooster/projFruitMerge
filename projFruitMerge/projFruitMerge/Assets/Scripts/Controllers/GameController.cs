@@ -11,7 +11,7 @@ public class GameController : MonoBehaviour
     [SerializeField] FadeController FadeController;
 
     [Space()]
-    [SerializeField] LanguageController LanguageController;
+    [SerializeField] GameLanguageController LanguageController;
 
     [Space()]
     [SerializeField] ParallaxController PointUI;
@@ -27,10 +27,8 @@ public class GameController : MonoBehaviour
     [SerializeField] ToggleController SoundsToggle;
     [SerializeField] ToggleController MusicsToggle;
 
-    [Header("Unity Ads")]
+    [Header("Ads")]
     [SerializeField] AdsController AdsController;
-    //[SerializeField] InterstitialAdsController InterstitialAdsController;
-    [SerializeField] AdsInitializer AdsInitializer;
 
     [Header("Game Over Position")]
     [SerializeField] Vector2 StartPosition;
@@ -44,41 +42,15 @@ public class GameController : MonoBehaviour
 
     public bool OnGame = true;
 
-    private void Awake()
-    {
-        int l = LanguageController.GetLocalizationIndex();
-        LanguageController.Initialize();
-        StartCoroutine(WaitUntilInitialize());
-
-        Player.BestScore = 0;
-        Player.Sounds = 1;
-        Player.Musics = 1;
-        Player.Language = l;
-
-        if (SQLiteManager.Initialize())
-        {
-            object[] data = SQLiteManager.ReturnValues(CommonQuery.Select("*", "PLAYER"));
-
-            Player.BestScore = Convert.ToInt32(data[0]);
-            Player.Sounds = Convert.ToInt32(data[1]);
-            Player.Musics = Convert.ToInt32(data[2]);
-            Player.Language = Convert.ToInt32(data[3]);
-        }
-
-        LanguageController.Translate(Player.Language);
-    }
-
-    IEnumerator WaitUntilInitialize()
-    {
-        AdsInitializer.Initialize();
-        yield return new WaitUntil(() => AdsInitializer.Initialized == true);
-        AdsController.LoadBanner();
-        AdsController.LoadInterstitialAd();
-    }
 
     private void Start()
     {
-        if(Player.Sounds == 0) SoundsToggle.Turn();
+        LanguageController.Translate(Player.Language);
+
+        AdsController.LoadBanner();
+        AdsController.LoadInterstitialAd();
+
+        if (Player.Sounds == 0) SoundsToggle.Turn();
         if (Player.Musics == 0) MusicsToggle.Turn();
 
         RaycastManager = new RaycastManager();
@@ -176,12 +148,12 @@ public class GameController : MonoBehaviour
         if (ascending)
         {
             Player.Language++;
-            if (Player.Language > LanguageController.GetLanguageLenght()) Player.Language = 0;
+            if (Player.Language > LanguageInitializer.GetLanguageLenght()) Player.Language = 0;
         }
         else
         {
             Player.Language--;
-            if (Player.Language < 0) Player.Language = LanguageController.GetLanguageLenght();
+            if (Player.Language < 0) Player.Language = LanguageInitializer.GetLanguageLenght();
         }
 
         LanguageController.Translate(Player.Language);

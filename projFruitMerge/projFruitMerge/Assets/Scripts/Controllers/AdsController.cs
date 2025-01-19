@@ -90,11 +90,12 @@ class AdsController : MonoBehaviour
 
     private void CreateBanner()
     {
-#if UNITY_ANDROID
-        Banner = new BannerView(AdBannerAndroid, AdSize.Banner, AdPosition.Bottom);
-#elif UNITY_IPHONE
-        Banner = new BannerView(AdBannerAndroid, AdSize.Banner, AdPosition.Bottom);
-#endif
+        if (Application.platform == RuntimePlatform.Android)
+            Banner = new BannerView(AdBannerAndroid, AdSize.Banner, AdPosition.Bottom);
+        else if (Application.platform == RuntimePlatform.IPhonePlayer)
+            Banner = new BannerView(AdBannerIos, AdSize.Banner, AdPosition.Bottom);
+        else Banner = new BannerView(AdBannerAndroid, AdSize.Banner, AdPosition.Bottom);
+
 
         Banner.OnBannerAdLoaded += OnBannerAdLoaded;
         Banner.OnBannerAdLoadFailed += OnBannerAdLoadFailed;

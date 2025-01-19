@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 using UnityEngine;
-class LanguageController : MonoBehaviour
+class GameLanguageController : MonoBehaviour
 {
     [SerializeField] private GameObject nextText;
     [SerializeField] private GameObject settingsText;
@@ -27,19 +27,10 @@ class LanguageController : MonoBehaviour
     [SerializeField] private GameObject distribuitionText;
     [SerializeField] private GameObject backToMainText;
 
-    [SerializeField] TextAsset Json;
-    Dictionary<string, GameText> bruteValues;
-
-    public void Initialize()
-    {
-        string jsonContent = Json.text;
-
-        bruteValues = JsonConvert.DeserializeObject<Dictionary<string, GameText>>(jsonContent);
-    }
 
     public void Translate(int index)
     {
-        GameText gameText = bruteValues[index.ToString()];
+        GameText gameText = LanguageInitializer.bruteValues[index.ToString()];
 
         UIManager.SetText(nextText, gameText.NextText);
         UIManager.SetText(settingsText, gameText.SettingsText);
@@ -60,18 +51,5 @@ class LanguageController : MonoBehaviour
         UIManager.SetText(distribuitionText, gameText.DistribuitionText);
         UIManager.SetText(backToMainText, gameText.BackToMainText);
 
-    }
-
-    public int GetLocalizationIndex()
-    {
-        CultureInfo cultureInfo = CultureInfo.CurrentCulture;
-
-        if (cultureInfo.Name.Equals("pt-BR", System.StringComparison.OrdinalIgnoreCase)) return 0;
-        else return 1;
-    }
-
-    public int GetLanguageLenght()
-    {
-        return bruteValues.Count - 1;
     }
 }
