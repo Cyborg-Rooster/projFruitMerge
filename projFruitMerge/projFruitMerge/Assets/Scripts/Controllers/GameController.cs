@@ -167,10 +167,15 @@ public class GameController : MonoBehaviour
 
     public void Restart()
     {
-        StartCoroutine(WaitUntilCloseAd());
+        StartCoroutine(WaitUntilCloseAd(2));
     }
 
-    IEnumerator WaitUntilCloseAd()
+    public void GoToMain()
+    {
+        StartCoroutine(WaitUntilCloseAd(1));
+    }
+
+    IEnumerator WaitUntilCloseAd(int scene)
     {
         FadeController.gameObject.SetActive(true);
         yield return FadeController.FadeIn();
@@ -181,7 +186,7 @@ public class GameController : MonoBehaviour
             yield return new WaitUntil(() => AdsController.InterstitialClosed == true);
         }
 
-        SceneLoaderManager.LoadScene(0);
+        SceneLoaderManager.LoadScene(scene);
     }
 
 }

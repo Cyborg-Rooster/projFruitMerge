@@ -26,4 +26,6 @@ class GameText
     public string AudioText;
     public string DistribuitionText;
     public string BackToMainText;
+    public string PlayMainText;
+    public string OptionsMainText;
 }

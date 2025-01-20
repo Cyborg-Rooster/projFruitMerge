@@ -11,7 +11,7 @@ public class SplashscreenController : MonoBehaviour
 
     AudioSource AudioSource;
 
-    bool loaded;
+    public bool loaded;
     private void Awake()
     {
         StartCoroutine(WaitUntilInitialize());
@@ -74,8 +74,9 @@ public class SplashscreenController : MonoBehaviour
     IEnumerator WaitUntilLoad()
     {
         AudioSource.Play();
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(2.5f);
         yield return new WaitUntil(() => loaded = true);
+
         SceneLoaderManager.LoadScene(1);
     }
 }
