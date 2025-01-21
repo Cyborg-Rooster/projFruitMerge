@@ -12,8 +12,10 @@ public class ToggleController : MonoBehaviour
     Animator Animator;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    void Awake()
     {
+        Animator = GetComponent<Animator>();
+        Animator.speed = 0;
     }
 
     // Update is called once per frame
