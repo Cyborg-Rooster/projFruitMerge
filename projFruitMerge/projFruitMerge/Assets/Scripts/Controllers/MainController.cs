@@ -9,20 +9,32 @@ public class MainController : MonoBehaviour
     [SerializeField] MainLanguageController LanguageController;
     [SerializeField] ToggleController SoundsToggle;
     [SerializeField] ToggleController MusicsToggle;
+    [SerializeField] MusicController MusicController;
+    [SerializeField] AudioVolumeController SoundVolumeController;
+    [SerializeField] AudioVolumeController MusicVolumeController;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         LanguageController.Translate(Player.Language);
 
+        if (Player.Sounds == 0) 
+        {
+            SoundVolumeController.SetVolume(0f);
+            SoundsToggle.Turn();
+        }
+        else SoundVolumeController.SetVolume(0.3f);
 
-        if (Player.Sounds == 0) SoundsToggle.Turn();
-        if (Player.Musics == 0) MusicsToggle.Turn();
+        if (Player.Musics == 0)
+        {
+            MusicVolumeController.SetVolume(0f);
+            MusicsToggle.Turn();
+        }
+        else MusicVolumeController.SetVolume(0.3f);
 
         UIManager.SetText(Version, "v"+Application.version);
         StartCoroutine(FadeController.FadeOut());
-
-
-        Debug.Log("Sounds: " + Player.Sounds + ", Musics:" + Player.Musics);
+        StartCoroutine(MusicController.FadeOut());
     }
 
     public void GoToGame()
@@ -47,11 +59,21 @@ public class MainController : MonoBehaviour
     public void SetMusicsOn(ToggleController MusicsToggle)
     {
         Player.Musics = MusicsToggle.On ? 1 : 0;
+
+        if (Player.Musics == 0) MusicVolumeController.SetVolume(0f);
+        else MusicVolumeController.SetVolume(0.3f);
     }
 
     public void SetSoundsOn(ToggleController SoundsToggle)
     {
         Player.Sounds = SoundsToggle.On ? 1 : 0;
+
+        Debug.Log(Player.Sounds);
+
+        if (Player.Sounds == 0) SoundVolumeController.SetVolume(0f);
+        else SoundVolumeController.SetVolume(0.3f);
+
+        Debug.Log("triggei");
     }
 
     public void ChangeLanguage(bool ascending)
@@ -91,6 +113,7 @@ public class MainController : MonoBehaviour
     IEnumerator WaitUntilCloseAd()
     {
         FadeController.gameObject.SetActive(true);
+        StartCoroutine(MusicController.FadeIn());
         yield return FadeController.FadeIn();
 
         SceneLoaderManager.LoadScene(2);

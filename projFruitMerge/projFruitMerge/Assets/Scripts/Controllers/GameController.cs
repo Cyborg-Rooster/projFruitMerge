@@ -26,6 +26,8 @@ public class GameController : MonoBehaviour
     [Space()]
     [SerializeField] ToggleController SoundsToggle;
     [SerializeField] ToggleController MusicsToggle;
+    [SerializeField] AudioVolumeController SoundVolumeController;
+    [SerializeField] AudioVolumeController MusicVolumeController;
 
     [Header("Ads")]
     [SerializeField] AdsController AdsController;
@@ -50,8 +52,19 @@ public class GameController : MonoBehaviour
         AdsController.LoadBanner();
         AdsController.LoadInterstitialAd();
 
-        if (Player.Sounds == 0) SoundsToggle.Turn();
-        if (Player.Musics == 0) MusicsToggle.Turn();
+        if (Player.Sounds == 0)
+        {
+            SoundVolumeController.SetVolume(0f);
+            SoundsToggle.Turn();
+        }
+        else SoundVolumeController.SetVolume(0.3f);
+
+        if (Player.Musics == 0)
+        {
+            MusicVolumeController.SetVolume(0f);
+            MusicsToggle.Turn();
+        }
+        else MusicVolumeController.SetVolume(0.3f);
 
         RaycastManager = new RaycastManager();
 
@@ -136,11 +149,17 @@ public class GameController : MonoBehaviour
     public void SetMusicsOn(ToggleController MusicsToggle)
     {
         Player.Musics = MusicsToggle.On ? 1 : 0;
+
+        if (Player.Musics == 0) MusicVolumeController.SetVolume(0f);
+        else MusicVolumeController.SetVolume(0.3f);
     }
 
     public void SetSoundsOn(ToggleController SoundsToggle)
     {
         Player.Sounds = SoundsToggle.On ? 1 : 0;
+
+        if (Player.Sounds == 0) SoundVolumeController.SetVolume(0f);
+        else SoundVolumeController.SetVolume(0.3f);
     }
 
     public void ChangeLanguage(bool ascending)

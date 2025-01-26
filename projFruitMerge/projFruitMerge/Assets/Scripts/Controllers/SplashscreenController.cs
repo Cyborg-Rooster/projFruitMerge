@@ -8,6 +8,7 @@ public class SplashscreenController : MonoBehaviour
     [SerializeField] float time;
     [SerializeField] LanguageInitializer LanguageInitializer;
     [SerializeField] AdsInitializer AdsInitializer;
+    [SerializeField] AudioVolumeController SoundVolumeController;
 
     AudioSource AudioSource;
 
@@ -21,7 +22,6 @@ public class SplashscreenController : MonoBehaviour
     {
         int l = LanguageInitializer.GetLocalizationIndex();
         LanguageInitializer.Initialize();
-
 
         Player.BestScore = 0;
         Player.Sounds = 1;
@@ -37,6 +37,11 @@ public class SplashscreenController : MonoBehaviour
             Player.Musics = Convert.ToInt32(data[2]);
             Player.Language = Convert.ToInt32(data[3]);
         }
+
+        bool audioOn = Player.Sounds == 1 || Player.Musics == 1;
+
+        if (audioOn == true) SoundVolumeController.SetVolume(0.3f);
+        else SoundVolumeController.SetVolume(0f);
 
         AdsInitializer.Initialize();
         yield return new WaitUntil(() => AdsInitializer.Initialized == true);

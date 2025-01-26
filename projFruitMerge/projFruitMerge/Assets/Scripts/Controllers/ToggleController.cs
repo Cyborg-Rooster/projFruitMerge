@@ -10,11 +10,13 @@ public class ToggleController : MonoBehaviour
     public bool On;
 
     Animator Animator;
+    AudioSource AudioSource;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()
     {
         Animator = GetComponent<Animator>();
+        AudioSource = GetComponent<AudioSource>();
         Animator.speed = 0;
     }
 
@@ -45,12 +47,13 @@ public class ToggleController : MonoBehaviour
 
     IEnumerator TurnOn()
     {
+        On = true;
         Animator.speed = 1;
         Animator.Play("Base Layer.ToggleOn", 0);
+        AudioSource.Play();
 
         yield return new WaitForSeconds(0.3f);
 
-        On = true;
         Animator.speed = 0;   
         
         TriggerEvent();
@@ -58,12 +61,13 @@ public class ToggleController : MonoBehaviour
 
     IEnumerator TurnOff()
     {
+        On = false;
         Animator.speed = 1;
         Animator.Play("Base Layer.ToggleOff", 0);
+        AudioSource.Play();
 
         yield return new WaitForSeconds(0.3f);
 
-        On = false;
         Animator.speed = 0;
 
         TriggerEvent();
