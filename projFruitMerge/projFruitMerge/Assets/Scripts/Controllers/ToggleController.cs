@@ -11,6 +11,8 @@ public class ToggleController : MonoBehaviour
 
     Animator Animator;
     AudioSource AudioSource;
+
+    bool canClick = true;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()
@@ -28,7 +30,7 @@ public class ToggleController : MonoBehaviour
 
     private void OnMouseDown()
     {
-        Turn();
+        if(canClick) Turn();
     }
 
     public void Turn()
@@ -47,6 +49,7 @@ public class ToggleController : MonoBehaviour
 
     IEnumerator TurnOn()
     {
+        canClick = false;
         On = true;
         Animator.speed = 1;
         Animator.Play("Base Layer.ToggleOn", 0);
@@ -57,10 +60,12 @@ public class ToggleController : MonoBehaviour
         Animator.speed = 0;   
         
         TriggerEvent();
+        canClick = true;
     }
 
     IEnumerator TurnOff()
     {
+        canClick = false;
         On = false;
         Animator.speed = 1;
         Animator.Play("Base Layer.ToggleOff", 0);
@@ -71,5 +76,6 @@ public class ToggleController : MonoBehaviour
         Animator.speed = 0;
 
         TriggerEvent();
+        canClick = true;
     }
 }

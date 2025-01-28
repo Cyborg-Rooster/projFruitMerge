@@ -1463,7 +1463,7 @@ MonoBehaviour:
   developerText: {fileID: 4438398010030342195}
   artistText: {fileID: 1725154585337068710}
   audioText: {fileID: 885780882803444564}
-  distribuitionText: {fileID: 4438398010030342195}
+  distribuitionText: {fileID: 4991190306884673061}
   backToMainText: {fileID: 2428740292926845103}
 --- !u!4 &1988451839
 Transform:

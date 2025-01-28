@@ -33,6 +33,8 @@ public class MusicController : MonoBehaviour
     {
         if (Player.Musics == 1)
         {
+            AudioSource = GetComponent<AudioSource>();
+
             while (AudioSource.volume > 0)
             {
                 AudioSource.volume -= Time.deltaTime / Duration * MusicVolume;

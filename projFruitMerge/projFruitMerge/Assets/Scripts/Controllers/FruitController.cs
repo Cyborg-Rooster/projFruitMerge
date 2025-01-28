@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
@@ -10,12 +11,17 @@ public class FruitController : MonoBehaviour
     public GameController GameController;
     public GameObject Canvas;
 
+    [Header("Audios")]
+    [SerializeField] AudioResource Cut;
+    [SerializeField] AudioResource Pop;
+
     [SerializeField] GameObject NextFruit;
 
     [SerializeField] int PointsToAddOnMerge;
 
     private GraphicRaycaster graphicRaycaster;
     private EventSystem eventSystem;
+    private AudioSource audioSource;
 
     bool collided;
     bool onGame;
@@ -45,7 +51,11 @@ public class FruitController : MonoBehaviour
 
                         transform.position = new Vector3(realX, transform.position.y, transform.position.z);
 
-                        if (touch.phase == TouchPhase.Ended) SetOnGame();
+                        if (touch.phase == TouchPhase.Ended) 
+                        { 
+                            SetOnGame();
+                            PlayAudio(true);
+                        }
                     }
                 }
             }
@@ -69,6 +79,7 @@ public class FruitController : MonoBehaviour
                 ft.CameraShakeController = CameraShakeController;
                 ft.GameController = GameController;
                 ft.SetOnGame();
+                ft.PlayAudio(false);
 
                 CameraShakeController.TriggerShake();
                 GameController.AddPoints(PointsToAddOnMerge);
@@ -98,6 +109,17 @@ public class FruitController : MonoBehaviour
     {
         onGame = true;
         GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
+    }
+
+    private void PlayAudio(bool fall)
+    {
+        if (Player.Sounds > 0)
+        {
+            audioSource = GetComponent<AudioSource>();
+            var r = fall ? Cut : Pop;
+            audioSource.resource = r;
+            audioSource.Play();
+        }
     }
 
     public void SetObjectsFromParent(CameraShakeController cameraShakeController, GameController gameController, GameObject canvas)
