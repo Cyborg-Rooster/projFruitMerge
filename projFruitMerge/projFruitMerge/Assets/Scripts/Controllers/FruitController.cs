@@ -23,6 +23,9 @@ public class FruitController : MonoBehaviour
     private EventSystem eventSystem;
     private AudioSource audioSource;
 
+    private float collisionTime = 0f; // Contador de tempo
+    private bool isColliding = false; // Estado da colisão
+
     bool collided;
     bool onGame;
 
@@ -51,8 +54,8 @@ public class FruitController : MonoBehaviour
 
                         transform.position = new Vector3(realX, transform.position.y, transform.position.z);
 
-                        if (touch.phase == TouchPhase.Ended) 
-                        { 
+                        if (touch.phase == TouchPhase.Ended)
+                        {
                             SetOnGame();
                             PlayAudio(true);
                         }
@@ -64,28 +67,43 @@ public class FruitController : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (tag != "Watermelon" && collision.gameObject != gameObject)
+        // Verifica se o objeto colidido é uma cópia do mesmo objeto
+        if (collision.gameObject.CompareTag(gameObject.tag))
         {
-            var fruitCollided = collision.gameObject;
+            isColliding = true;
+            collisionTime = 0f; // Reseta o contador
+        }
+    }
 
-            if (fruitCollided.tag == gameObject.tag && !collided)
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+        if (isColliding && collision.gameObject.CompareTag(gameObject.tag))
+        {
+            if (tag != "Watermelon" && collision.gameObject != gameObject)
             {
-                var go = Instantiate(NextFruit, transform.position, Quaternion.identity, transform.parent);
-                var ft = go.GetComponent<FruitController>();
+                var fruitCollided = collision.gameObject;
 
-                collided = true;
-                fruitCollided.GetComponent<FruitController>().collided = collided;
+                collisionTime += Time.deltaTime;
 
-                ft.CameraShakeController = CameraShakeController;
-                ft.GameController = GameController;
-                ft.SetOnGame();
-                ft.PlayAudio(false);
+                if (fruitCollided.tag == gameObject.tag && !collided && collisionTime >= 0.1f)
+                {
+                    var go = Instantiate(NextFruit, transform.position, Quaternion.identity, transform.parent);
+                    var ft = go.GetComponent<FruitController>();
 
-                CameraShakeController.TriggerShake();
-                GameController.AddPoints(PointsToAddOnMerge);
+                    collided = true;
+                    fruitCollided.GetComponent<FruitController>().collided = collided;
 
-                Destroy(fruitCollided);
-                Destroy(gameObject);
+                    ft.CameraShakeController = CameraShakeController;
+                    ft.GameController = GameController;
+                    ft.SetOnGame();
+                    ft.PlayAudio(false);
+
+                    CameraShakeController.TriggerShake();
+                    GameController.AddPoints(PointsToAddOnMerge);
+
+                    Destroy(fruitCollided);
+                    Destroy(gameObject);
+                }
             }
         }
     }
@@ -100,7 +118,7 @@ public class FruitController : MonoBehaviour
         List<RaycastResult> results = new List<RaycastResult>();
         graphicRaycaster.Raycast(pointerEventData, results);
 
-        if (results.Count > 0) return true;  
+        if (results.Count > 0) return true;
 
         return false;
     }
