@@ -199,7 +199,7 @@ public class GameController : MonoBehaviour
         FadeController.gameObject.SetActive(true);
         yield return FadeController.FadeIn();
 
-        if (AdsController.IntersticialLoaded)
+        if (AdsController.IntersticialLoaded && scene == 2)
         {
             AdsController.ShowInterstitialAd();
             yield return new WaitUntil(() => AdsController.InterstitialClosed == true);

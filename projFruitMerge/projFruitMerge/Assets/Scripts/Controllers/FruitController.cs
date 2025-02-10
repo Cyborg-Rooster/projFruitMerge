@@ -85,7 +85,7 @@ public class FruitController : MonoBehaviour
 
                 collisionTime += Time.deltaTime;
 
-                if (fruitCollided.tag == gameObject.tag && !collided && collisionTime >= 0.1f)
+                if (fruitCollided.tag == gameObject.tag && !collided && collisionTime >= 0.02f)
                 {
                     var go = Instantiate(NextFruit, transform.position, Quaternion.identity, transform.parent);
                     var ft = go.GetComponent<FruitController>();
