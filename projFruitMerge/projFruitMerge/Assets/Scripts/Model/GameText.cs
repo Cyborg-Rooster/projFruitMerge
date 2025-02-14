@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using UnityEngine;
 
 
 [System.Serializable]
@@ -28,4 +29,8 @@ class GameText
     public string BackToMainText;
     public string PlayMainText;
     public string OptionsMainText;
+    public string IdTitle;
+    public string Explanation;
+    public string IdText;
+    public string Understood;
 }

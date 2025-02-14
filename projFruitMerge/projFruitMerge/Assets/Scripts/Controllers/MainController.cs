@@ -4,9 +4,13 @@ using UnityEngine;
 public class MainController : MonoBehaviour
 {
     [SerializeField] FadeController FadeController;
+    [SerializeField] ParallaxController Form;
     [SerializeField] ParallaxController Dialog;
+
+    [SerializeField] GameObject ID;
     [SerializeField] GameObject Version;
     [SerializeField] MainLanguageController LanguageController;
+
     [SerializeField] ToggleController SoundsToggle;
     [SerializeField] ToggleController MusicsToggle;
     [SerializeField] MusicController MusicController;
@@ -35,6 +39,12 @@ public class MainController : MonoBehaviour
         UIManager.SetText(Version, "v"+Application.version);
         StartCoroutine(FadeController.FadeOut());
         StartCoroutine(MusicController.FadeOut());
+
+        if (ServerManager.FirstTime)
+        {
+            UIManager.SetText(ID, Player.IDUser);
+            Dialog.Move();
+        }
     }
 
     public void GoToGame()
@@ -44,16 +54,24 @@ public class MainController : MonoBehaviour
 
     public void Pause()
     {
-        Dialog.Moving = true;
+        Form.Moving = true;
     }
 
     public void Unpause()
     {
+        var rt = Form.GetComponent<RectTransform>();
+        rt.anchoredPosition = new Vector2(0, -397);
+
+        Form.Moving = false;
+        SaveGame();
+    }
+
+    public void CloseDialog()
+    {
         var rt = Dialog.GetComponent<RectTransform>();
         rt.anchoredPosition = new Vector2(0, -397);
 
-        Dialog.Moving = false;
-        SaveGame();
+        Form.Moving = false;
     }
 
     public void SetMusicsOn(ToggleController MusicsToggle)
@@ -72,8 +90,6 @@ public class MainController : MonoBehaviour
 
         if (Player.Sounds == 0) SoundVolumeController.SetVolume(0f);
         else SoundVolumeController.SetVolume(0.3f);
-
-        Debug.Log("triggei");
     }
 
     public void ChangeLanguage(bool ascending)

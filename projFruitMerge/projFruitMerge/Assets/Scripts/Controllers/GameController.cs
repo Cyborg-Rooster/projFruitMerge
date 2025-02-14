@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections;
+using System.Reflection;
 using UnityEngine;
 
 public class GameController : MonoBehaviour
@@ -12,6 +13,8 @@ public class GameController : MonoBehaviour
 
     [Space()]
     [SerializeField] GameLanguageController LanguageController;
+    [SerializeField] RankingController RankingController;
+    [SerializeField] GameObject YourPosition;
 
     [Space()]
     [SerializeField] ParallaxController PointUI;
@@ -68,6 +71,9 @@ public class GameController : MonoBehaviour
 
         RaycastManager = new RaycastManager();
 
+        RankingController.CreateRanking(LanguageController.GetScoreString(Player.Language));
+        UIManager.SetText(YourPosition, ServerManager.Ranking.user_position);
+
         StartCoroutine(FadeController.FadeOut());
     }
 
@@ -75,7 +81,7 @@ public class GameController : MonoBehaviour
     {
         if(RaycastManager.IsColliding(Distance, Distance, StartPosition, LayerMask) && OnGame)
         {
-            EndGame();
+            StartCoroutine(EndGame());
         }
     }
 
@@ -95,8 +101,22 @@ public class GameController : MonoBehaviour
         );
     }
 
-    private void EndGame()
+    private IEnumerator EndGame()
     {
+        UIManager.SetButtonEnable(OptionsUI.gameObject, false);
+
+        if (Player.BestScore < Points)
+        { 
+            Player.BestScore = Points; 
+            NewText.SetActive(true);
+
+            ServerManager.Ranking.ResortRanking(Player.BestScore);
+
+            yield return WaitUntilGetPosition();
+            RankingController.Refresh(LanguageController.GetScoreString(Player.Language));
+        }
+
+        UIManager.SetText(BestScoreText, Player.BestScore);
         OnGame = false;
 
         Options.SetActive(false);
@@ -107,17 +127,13 @@ public class GameController : MonoBehaviour
         NextUI.Moving = true;
         OptionsUI.Moving = true;
 
-        UIManager.SetButtonEnable(OptionsUI.gameObject, false);
-
-        if (Player.BestScore < Points)
-        { 
-            Player.BestScore = Points; 
-            NewText.SetActive(true);
-        }
-
-        UIManager.SetText(BestScoreText, Player.BestScore);
-
         SaveGame();
+    }
+
+    IEnumerator WaitUntilGetPosition()
+    {
+        yield return ServerManager.SendPutRequest();
+        UIManager.SetText(YourPosition, ServerManager.Ranking.user_position);
     }
 
     IEnumerator WaitUntilNextFrame()

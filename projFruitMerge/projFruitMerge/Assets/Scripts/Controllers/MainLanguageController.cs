@@ -19,6 +19,10 @@ class MainLanguageController : MonoBehaviour
     [SerializeField] private GameObject distribuitionText;
     [SerializeField] private GameObject PlayMainText;
     [SerializeField] private GameObject OptionsMainText;
+    [SerializeField] private GameObject IdTitle;
+    [SerializeField] private GameObject Explanation;
+    [SerializeField] private GameObject IdText;
+    [SerializeField] private GameObject Understood;
 
 
     public void Translate(int index)
@@ -37,6 +41,10 @@ class MainLanguageController : MonoBehaviour
         UIManager.SetText(distribuitionText, gameText.DistribuitionText);
         UIManager.SetText(PlayMainText, gameText.PlayMainText);
         UIManager.SetText(OptionsMainText, gameText.OptionsMainText);
+        UIManager.SetText(IdTitle, gameText.IdTitle);
+        UIManager.SetText(Explanation, gameText.Explanation);
+        UIManager.SetText(IdText, gameText.IdText);
+        UIManager.SetText(Understood, gameText.Understood);
     }
 
 

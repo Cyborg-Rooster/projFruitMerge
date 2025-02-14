@@ -10,4 +10,6 @@ static class Player
     public static int Sounds;
     public static int Musics;
     public static int Language;
+    public static string IDUser;
+    public static string ApiKey;
 }

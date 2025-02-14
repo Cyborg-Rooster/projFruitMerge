@@ -18,8 +18,14 @@
     "AudioText": "Áudios: Everton Rodrigues",
     "DistribuitionText": "Distribuição: Cyborg Rooster",
     "BackToMainText": "Voltar Para o Menu",
-    "PlayMainText" : "Jogar",
-    "OptionsMainText" : "Opções" 
+    "PlayMainText": "Jogar",
+    "OptionsMainText": "Opções",
+    "IdTitle": "Seus Dados",
+    "Explanation": "Como nos importamos com sua privacidade, declaramos que o único dado pessoal coletado é sua pontuação de forma anônima.",
+    "IdText": "Seu identificador é:",
+    "Understood": "Entendi"
+
+
   },
   "1": {
     "NextText": "Next",
@@ -40,7 +46,11 @@
     "AudioText": "Audio: Everton Rodrigues",
     "DistribuitionText": "Distribution: Cyborg Rooster",
     "BackToMainText": "Back to Menu",
-    "PlayMainText" : "Play",
-    "OptionsMainText" : "Options" 
+    "PlayMainText": "Play",
+    "OptionsMainText": "Options",
+    "IdTitle": "Disclaimer",
+    "Explanation": "As we care about your privacy, we declare that the only personal data collected is your score anonymously.",
+    "IdText": "Your ID is:",
+    "Understood": "Understood"
   }
 }

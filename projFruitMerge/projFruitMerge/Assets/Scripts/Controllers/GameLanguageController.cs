@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
@@ -52,5 +53,12 @@ class GameLanguageController : MonoBehaviour
         UIManager.SetText(distribuitionText, gameText.DistribuitionText);
         UIManager.SetText(backToMainText, gameText.BackToMainText);
 
+    }
+
+    public string GetScoreString(int index)
+    {
+        GameText gameText = LanguageInitializer.bruteValues[index.ToString()];
+
+        return gameText.BestScoreText;
     }
 }

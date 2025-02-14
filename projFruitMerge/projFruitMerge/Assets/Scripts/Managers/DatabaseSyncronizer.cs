@@ -27,7 +27,9 @@ class DatabaseSynchronizer
                 "BEST_SCORE INTEGER, " +
                 "SOUNDS INTEGER, " +
                 "MUSICS INTEGER, " +
-                "LANGUAGE INTEGER"
+                "LANGUAGE INTEGER, " +
+                "IDUSER VARCHAR, " +
+                "APIKEY VARCHAR"
             )
         );
 
@@ -48,8 +50,8 @@ class DatabaseSynchronizer
             CommonQuery.Add
             (
                 "PLAYER",
-                "BEST_SCORE, SOUNDS, MUSICS, LANGUAGE",
-                $"0, 1, 1, {Player.Language}"
+                "BEST_SCORE, SOUNDS, MUSICS, LANGUAGE, APIKEY, IDUSER",
+                $"0, 1, 1, {Player.Language}, '', ''"
             )
         );
         #endregion
