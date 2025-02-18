@@ -71,8 +71,11 @@ public class GameController : MonoBehaviour
 
         RaycastManager = new RaycastManager();
 
-        RankingController.CreateRanking(LanguageController.GetScoreString(Player.Language));
-        UIManager.SetText(YourPosition, ServerManager.Ranking.user_position);
+        if (ServerManager.Online == true)
+        {
+            RankingController.CreateRanking(LanguageController.GetScoreString(Player.Language));
+            UIManager.SetText(YourPosition, ServerManager.Ranking.user_position);
+        }
 
         StartCoroutine(FadeController.FadeOut());
     }

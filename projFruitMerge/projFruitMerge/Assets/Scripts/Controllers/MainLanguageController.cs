@@ -17,8 +17,13 @@ class MainLanguageController : MonoBehaviour
     [SerializeField] private GameObject artistText;
     [SerializeField] private GameObject audioText;
     [SerializeField] private GameObject distribuitionText;
+
     [SerializeField] private GameObject PlayMainText;
     [SerializeField] private GameObject OptionsMainText;
+    [SerializeField] private GameObject bestScoreText;
+    [SerializeField] private GameObject actualPositionText;
+    [SerializeField] private GameObject PlayGameText;
+
     [SerializeField] private GameObject IdTitle;
     [SerializeField] private GameObject Explanation;
     [SerializeField] private GameObject IdText;
@@ -40,6 +45,10 @@ class MainLanguageController : MonoBehaviour
         UIManager.SetText(audioText, gameText.AudioText);
         UIManager.SetText(distribuitionText, gameText.DistribuitionText);
         UIManager.SetText(PlayMainText, gameText.PlayMainText);
+        UIManager.SetText(PlayGameText, gameText.PlayMainText);
+        UIManager.SetText(OptionsMainText, gameText.OptionsMainText);
+        UIManager.SetText(bestScoreText, gameText.BestScoreText);
+        UIManager.SetText(actualPositionText, gameText.ActualPositionText);
         UIManager.SetText(OptionsMainText, gameText.OptionsMainText);
         UIManager.SetText(IdTitle, gameText.IdTitle);
         UIManager.SetText(Explanation, gameText.Explanation);
@@ -47,5 +56,10 @@ class MainLanguageController : MonoBehaviour
         UIManager.SetText(Understood, gameText.Understood);
     }
 
+    public string GetScoreString(int index)
+    {
+        GameText gameText = LanguageInitializer.bruteValues[index.ToString()];
 
+        return gameText.BestScoreText;
+    }
 }

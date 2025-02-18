@@ -7,8 +7,14 @@ public class MainController : MonoBehaviour
     [SerializeField] ParallaxController Form;
     [SerializeField] ParallaxController Dialog;
 
+    [SerializeField] GameObject Options;
+    [SerializeField] GameObject Ranking;
+
     [SerializeField] GameObject ID;
     [SerializeField] GameObject Version;
+    [SerializeField] GameObject YourPosition;
+    [SerializeField] GameObject BestScoreText;
+    [SerializeField] RankingController RankingController;
     [SerializeField] MainLanguageController LanguageController;
 
     [SerializeField] ToggleController SoundsToggle;
@@ -20,9 +26,10 @@ public class MainController : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        ServerManager.Online = false;
         LanguageController.Translate(Player.Language);
 
-        if (Player.Sounds == 0) 
+        if (Player.Sounds == 0)
         {
             SoundVolumeController.SetVolume(0f);
             SoundsToggle.Turn();
@@ -36,15 +43,24 @@ public class MainController : MonoBehaviour
         }
         else MusicVolumeController.SetVolume(0.3f);
 
-        UIManager.SetText(Version, "v"+Application.version);
+        UIManager.SetText(Version, "v" + Application.version);
+        UIManager.SetText(BestScoreText, Player.BestScore);
+
+        if (ServerManager.Online == true)
+        {
+            RankingController.CreateRanking(LanguageController.GetScoreString(Player.Language));
+            UIManager.SetText(YourPosition, ServerManager.Ranking.user_position);
+
+            if (ServerManager.FirstTime)
+            {
+                ServerManager.FirstTime = false;
+                UIManager.SetText(ID, Player.IDUser);
+                Dialog.Move();
+            }
+        }
+
         StartCoroutine(FadeController.FadeOut());
         StartCoroutine(MusicController.FadeOut());
-
-        if (ServerManager.FirstTime)
-        {
-            UIManager.SetText(ID, Player.IDUser);
-            Dialog.Move();
-        }
     }
 
     public void GoToGame()
@@ -54,6 +70,17 @@ public class MainController : MonoBehaviour
 
     public void Pause()
     {
+        Ranking.SetActive(false);
+        Options.SetActive(true);
+
+        Form.Moving = true;
+    }
+
+    public void SetRanking()
+    {
+        Ranking.SetActive(true);
+        Options.SetActive(false);
+
         Form.Moving = true;
     }
 
