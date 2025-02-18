@@ -113,10 +113,13 @@ public class GameController : MonoBehaviour
             Player.BestScore = Points; 
             NewText.SetActive(true);
 
-            ServerManager.Ranking.ResortRanking(Player.BestScore);
+            if (ServerManager.Online == true)
+            {
+                ServerManager.Ranking.ResortRanking(Player.BestScore);
 
-            yield return WaitUntilGetPosition();
-            RankingController.Refresh(LanguageController.GetScoreString(Player.Language));
+                yield return WaitUntilGetPosition();
+                RankingController.Refresh(LanguageController.GetScoreString(Player.Language));
+            }
         }
 
         UIManager.SetText(BestScoreText, Player.BestScore);

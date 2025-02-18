@@ -26,7 +26,6 @@ public class MainController : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        ServerManager.Online = false;
         LanguageController.Translate(Player.Language);
 
         if (Player.Sounds == 0)
