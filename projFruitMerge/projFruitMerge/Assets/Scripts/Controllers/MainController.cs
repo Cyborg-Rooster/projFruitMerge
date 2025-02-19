@@ -79,7 +79,6 @@ public class MainController : MonoBehaviour
             IDDialog.SetActive(true);
             Dialog.Move();
         }
-        else CloseDialog();
 
         RankingController.CreateRanking(LanguageController.GetScoreString(Player.Language));
         UIManager.SetText(YourPosition, ServerManager.Ranking.user_position);
