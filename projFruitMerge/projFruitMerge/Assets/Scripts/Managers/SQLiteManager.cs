@@ -13,7 +13,9 @@ class SQLiteManager
     public static bool Initialize()
     {
         Directory.CreateDirectory($@"{Application.persistentDataPath}\Database\");
-        Database = new SqliteConnection(new SqliteConnection("URI=file:" + Connection));
+        Database = new SqliteConnection("URI=file:" + Connection);
+
+        SetDatabaseActive(true);
 
         bool databaseExist = int.Parse(ReturnValueAsString(CommonQuery.Select("COUNT(*)", "SQLITE_MASTER"))) > 0;
 
@@ -24,19 +26,15 @@ class SQLiteManager
 
     public static void RunQuery(string query)
     {
-        SetDatabaseActive(true);
         IDbCommand cmd;
 
         cmd = Database.CreateCommand();
         cmd.CommandText = query;
         cmd.ExecuteReader();
-
-        SetDatabaseActive(false);
     }
 
     public static string ReturnValueAsString(string query)
     {
-        SetDatabaseActive(true);
         IDbCommand cmd = Database.CreateCommand();
         cmd.CommandText = query;
 
@@ -47,13 +45,11 @@ class SQLiteManager
             r = reader[0].ToString();
         }
 
-        SetDatabaseActive(false);
         return r;
     }
 
     public static object[] ReturnValues(string query)
     {
-        SetDatabaseActive(true);
         IDbCommand cmd = Database.CreateCommand();
         cmd.CommandText = query;
 
@@ -68,13 +64,11 @@ class SQLiteManager
         }
 
         var r = result.ToArray();
-        SetDatabaseActive(false);
         return r;
     }
 
     public static int ReturnValueAsInt(string query)
     {
-        SetDatabaseActive(true);
         IDbCommand cmd;
         cmd = Database.CreateCommand();
         cmd.CommandText = query;
@@ -86,7 +80,6 @@ class SQLiteManager
             r = Convert.ToInt32(reader[0]);
         }
 
-        SetDatabaseActive(false);
         return r;
     }
 

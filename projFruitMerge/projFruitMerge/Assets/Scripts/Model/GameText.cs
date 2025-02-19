@@ -33,4 +33,7 @@ class GameText
     public string Explanation;
     public string IdText;
     public string Understood;
+    public string Offline;
+    public string Reconnect;
+    public string Reconnecting;
 }

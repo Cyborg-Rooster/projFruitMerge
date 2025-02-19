@@ -10,6 +10,10 @@ public class MainController : MonoBehaviour
     [SerializeField] GameObject Options;
     [SerializeField] GameObject Ranking;
 
+    [SerializeField] GameObject IDDialog;
+    [SerializeField] GameObject OfflineDialog;
+    [SerializeField] GameObject ReconnectDialog;
+
     [SerializeField] GameObject ID;
     [SerializeField] GameObject Version;
     [SerializeField] GameObject YourPosition;
@@ -22,6 +26,8 @@ public class MainController : MonoBehaviour
     [SerializeField] MusicController MusicController;
     [SerializeField] AudioVolumeController SoundVolumeController;
     [SerializeField] AudioVolumeController MusicVolumeController;
+
+    bool connected;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -45,21 +51,92 @@ public class MainController : MonoBehaviour
         UIManager.SetText(Version, "v" + Application.version);
         UIManager.SetText(BestScoreText, Player.BestScore);
 
-        if (ServerManager.Online == true)
-        {
-            RankingController.CreateRanking(LanguageController.GetScoreString(Player.Language));
-            UIManager.SetText(YourPosition, ServerManager.Ranking.user_position);
-
-            if (ServerManager.FirstTime)
-            {
-                ServerManager.FirstTime = false;
-                UIManager.SetText(ID, Player.IDUser);
-                Dialog.Move();
-            }
-        }
+        StartCoroutine(AskToReconnect());
 
         StartCoroutine(FadeController.FadeOut());
         StartCoroutine(MusicController.FadeOut());
+    }
+
+    IEnumerator AskToReconnect()
+    {
+        Dialog.Move();
+
+        if (ServerManager.GetSucessfull != true && ServerManager.PostSucessfull != true)
+        {
+            OfflineDialog.SetActive(true);
+
+            yield return new WaitUntil(() => connected);
+        }
+
+        ReconnectDialog.SetActive(false);
+
+        if (ServerManager.FirstTime)
+        {
+            ServerManager.FirstTime = false;
+            UIManager.SetText(ID, Player.IDUser);
+
+            OfflineDialog.SetActive(false);
+            IDDialog.SetActive(true);
+            Dialog.Move();
+        }
+        else CloseDialog();
+
+        RankingController.CreateRanking(LanguageController.GetScoreString(Player.Language));
+        UIManager.SetText(YourPosition, ServerManager.Ranking.user_position);
+    }
+
+    IEnumerator TryToReconnect()
+    {
+        yield return new WaitForSeconds(.2f);
+
+        OfflineDialog.SetActive(false);
+        ReconnectDialog.SetActive(true);
+
+        if (ServerManager.FirstTime)
+        {
+            yield return ServerManager.SendPostRequest();
+
+            if (ServerManager.PostSucessfull == true)
+            {
+                Player.IDUser = ServerManager.OnlinePlayer.IDUser;
+
+                SQLiteManager.RunQuery
+                (
+                    CommonQuery.Update
+                    (
+                        "PLAYER",
+                        $"BEST_SCORE = {Player.BestScore}, " +
+                        $"SOUNDS = {Player.Sounds}, " +
+                        $"MUSICS = {Player.Musics}, " +
+                        $"LANGUAGE = {Player.Language}, " +
+                        $"IDUSER = '{Player.IDUser}', " +
+                        $"APIKEY = '{Player.ApiKey}'",
+                        "BEST_SCORE = BEST_SCORE"
+                    )
+                );
+            }
+        }
+        else ServerManager.PostSucessfull = true;
+
+        yield return ServerManager.SendGetRequest();
+        yield return new WaitForSeconds(0.5f);
+
+        if (ServerManager.GetSucessfull != true && ServerManager.PostSucessfull != true)
+        {
+            OfflineDialog.SetActive(true);
+            ReconnectDialog.SetActive(false);
+        }
+        else connected = true;
+    }
+
+    private void OnApplicationQuit()
+    {
+        SQLiteManager.SetDatabaseActive(false);
+    }
+
+    public void Reconnect()
+    {
+        StartCoroutine(TryToReconnect());
     }
 
     public void GoToGame()

@@ -71,7 +71,7 @@ public class GameController : MonoBehaviour
 
         RaycastManager = new RaycastManager();
 
-        if (ServerManager.Online == true)
+        if (ServerManager.GetSucessfull == true && ServerManager.PostSucessfull == true)
         {
             RankingController.CreateRanking(LanguageController.GetScoreString(Player.Language));
             UIManager.SetText(YourPosition, ServerManager.Ranking.user_position);
@@ -113,7 +113,7 @@ public class GameController : MonoBehaviour
             Player.BestScore = Points; 
             NewText.SetActive(true);
 
-            if (ServerManager.Online == true)
+            if (ServerManager.GetSucessfull == true && ServerManager.PostSucessfull == true)
             {
                 ServerManager.Ranking.ResortRanking(Player.BestScore);
 
@@ -228,6 +228,11 @@ public class GameController : MonoBehaviour
         }
 
         SceneLoaderManager.LoadScene(scene);
+    }
+
+    private void OnApplicationQuit()
+    {
+        SQLiteManager.SetDatabaseActive(false);
     }
 
 }

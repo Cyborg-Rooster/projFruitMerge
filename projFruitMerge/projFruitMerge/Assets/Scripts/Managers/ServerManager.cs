@@ -12,11 +12,16 @@ class ServerManager
 {
     public static OnlinePlayer OnlinePlayer;
     public static Ranking Ranking;
-    public static bool? Online;
+
+    public static bool? PostSucessfull;
+    public static bool? GetSucessfull;
+    public static bool? PutSucessful;
     public static bool FirstTime;
 
     public static IEnumerator SendPostRequest()
     {
+        PostSucessfull = null;
+
         // Cria um UnityWebRequest com o método POST
         using (UnityWebRequest request = new UnityWebRequest("https://www.gagliardicacambas.com.br/api/index.php/users", "POST"))
         {
@@ -24,7 +29,7 @@ class ServerManager
 
             request.SetRequestHeader("Content-Type", "application/json");
             request.SetRequestHeader("X-API-KEY", Player.ApiKey);
-
+            request.timeout = 3;
 
             // Aguarda a conclusão da requisição
             yield return request.SendWebRequest();
@@ -32,27 +37,32 @@ class ServerManager
             // Tratamento de resposta
             if (request.result == UnityWebRequest.Result.Success)
             {
-                FirstTime = true;
-                Online = true;
+                PostSucessfull = true;
 
                 string jsonResponse = request.downloadHandler.text;
 
                 Debug.Log("Requisição POST bem-sucedida: " + jsonResponse);
                 OnlinePlayer = JsonConvert.DeserializeObject<OnlinePlayer[]>(jsonResponse)[0];
             }
-            else Online = false;
+            else 
+            {
+                Debug.LogError("Erro na requisição POST: " + request.error);
+                PostSucessfull = false; 
+            }
         }
     }
 
     public static IEnumerator SendGetRequest()
     {
+        GetSucessfull = null;
+
         using (UnityWebRequest request = new UnityWebRequest("https://www.gagliardicacambas.com.br/api/index.php/users", "GET"))
         {
             request.downloadHandler = new DownloadHandlerBuffer();
 
             request.SetRequestHeader("Content-Type", "application/json");
             request.SetRequestHeader("X-API-KEY", Player.ApiKey);
-            request.timeout = 2;
+            request.timeout = 3;
 
             // Aguarda a conclusão da requisição
             yield return request.SendWebRequest();
@@ -61,14 +71,18 @@ class ServerManager
             if (request.result == UnityWebRequest.Result.Success)
             {
 
-                Online = true;
+                GetSucessfull = true;
 
                 string jsonResponse = request.downloadHandler.text;
 
                 Debug.Log("Requisição GET bem-sucedida: " + jsonResponse);
                 Ranking = JsonConvert.DeserializeObject<Ranking>(jsonResponse);
             }
-            else Online = false;
+            else 
+            {
+                Debug.LogError("Erro na requisição GET: " + request.error);
+                GetSucessfull = false;
+            }
         }
     }
 
@@ -99,7 +113,7 @@ class ServerManager
             // Verifica o resultado
             if (request.result == UnityWebRequest.Result.Success)
             {
-                Online = true;
+                PutSucessful = true;
 
                 string jsonResponse = request.downloadHandler.text;
 
@@ -109,14 +123,24 @@ class ServerManager
             else
             {
                 Debug.LogError("Erro na requisição PUT: " + request.error);
-                Online = false;
+                PutSucessful = false;
             }
         }
     }
 
-    public static IEnumerator WaitUntilOnlineHasResult()
+    IEnumerator CheckConnectionWithPing()
     {
-        yield return new WaitUntil(() => Online != null);
+        Ping ping = new Ping("8.8.8.8"); // Servidor do Google DNS
+        yield return new WaitUntil(() => ping.isDone);
+
+        if (ping.time >= 0)
+        {
+            Debug.Log("Conexão estável");
+        }
+        else
+        {
+            Debug.Log("Conexão perdida");
+        }
     }
 
     public static IEnumerator WaitUntilRankingDownloaded()

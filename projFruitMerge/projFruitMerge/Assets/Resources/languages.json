@@ -23,9 +23,10 @@
     "IdTitle": "Seus Dados",
     "Explanation": "Como nos importamos com sua privacidade, declaramos que o único dado pessoal coletado é sua pontuação de forma anônima.",
     "IdText": "Seu identificador é:",
-    "Understood": "Entendi"
-
-
+    "Understood": "Entendi",
+    "Offline": "Conexão",
+    "Reconnect": "Reconectar",
+    "Reconnecting": "Reconectando..."
   },
   "1": {
     "NextText": "Next",
@@ -51,6 +52,9 @@
     "IdTitle": "Disclaimer",
     "Explanation": "As we care about your privacy, we declare that the only personal data collected is your score anonymously.",
     "IdText": "Your ID is:",
-    "Understood": "Understood"
+    "Understood": "Understood",
+    "Offline": "Connection",
+    "Reconnect": "Reconnect",
+    "Reconnecting" : "Reconnecting..."
   }
 }

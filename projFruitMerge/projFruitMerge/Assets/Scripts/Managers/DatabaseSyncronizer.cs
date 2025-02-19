@@ -51,7 +51,7 @@ class DatabaseSynchronizer
             (
                 "PLAYER",
                 "BEST_SCORE, SOUNDS, MUSICS, LANGUAGE, APIKEY, IDUSER",
-                $"0, 1, 1, {Player.Language}, '', ''"
+                $"0, 1, 1, {Player.Language}, '{Player.ApiKey}', ''"
             )
         );
         #endregion

@@ -6,9 +6,14 @@ public class SplashscreenController : MonoBehaviour
 {
     [SerializeField] GameObject Censor;
     [SerializeField] float time;
+
     [SerializeField] LanguageInitializer LanguageInitializer;
     [SerializeField] AdsInitializer AdsInitializer;
+
     [SerializeField] AudioVolumeController SoundVolumeController;
+    [SerializeField] Animator Logo;
+
+    [SerializeField] AudioClip Plim;
 
     AudioSource AudioSource;
 
@@ -16,6 +21,7 @@ public class SplashscreenController : MonoBehaviour
 
     private void Awake()
     {
+        Logo.speed = 0;
         StartCoroutine(WaitUntilInitialize());
     }
 
@@ -40,10 +46,13 @@ public class SplashscreenController : MonoBehaviour
             Player.Language = Convert.ToInt32(data[3]);
             Player.IDUser = data[4].ToString();
             Player.ApiKey = data[5].ToString();
-        }
-        else
+        } 
+        else ServerManager.FirstTime = true;
+
+        yield return ServerManager.SendPostRequest();
+
+        if (ServerManager.PostSucessfull == true)
         {
-            yield return ServerManager.SendPostRequest();
             Player.IDUser = ServerManager.OnlinePlayer.IDUser;
 
             SQLiteManager.RunQuery
@@ -107,6 +116,15 @@ public class SplashscreenController : MonoBehaviour
     {
         AudioSource.Play();
         yield return new WaitForSeconds(2.5f);
+
+        AudioSource.clip = Plim;
+        AudioSource.Play();
+        Logo.speed = 1;
+
+        yield return new WaitForSeconds(1f);
+
+        Logo.gameObject.SetActive(false);
+        yield return new WaitForSeconds(1.5f);
         yield return new WaitUntil(() => loaded = true);
 
         SceneLoaderManager.LoadScene(1);

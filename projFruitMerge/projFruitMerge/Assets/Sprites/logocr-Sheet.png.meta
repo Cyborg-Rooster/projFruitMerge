@@ -1,0 +1,454 @@
+fileFormatVersion: 2
+guid: bc3013d6581d5c44398e70e8ea475548
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7855935290538024967
+    second: logocr-Sheet_0
+  - first:
+      213: 5612519040307800152
+    second: logocr-Sheet_1
+  - first:
+      213: 5911387715367222426
+    second: logocr-Sheet_2
+  - first:
+      213: 395099430525082515
+    second: logocr-Sheet_3
+  - first:
+      213: 4980813608905967563
+    second: logocr-Sheet_4
+  - first:
+      213: 2316981694978865219
+    second: logocr-Sheet_5
+  - first:
+      213: 3010902366017665208
+    second: logocr-Sheet_6
+  - first:
+      213: 5332600443605031980
+    second: logocr-Sheet_7
+  - first:
+      213: 6531811081554271127
+    second: logocr-Sheet_8
+  - first:
+      213: -1621048082886446426
+    second: logocr-Sheet_9
+  - first:
+      213: 2088826807905344508
+    second: logocr-Sheet_10
+  - first:
+      213: 3890256669891054380
+    second: logocr-Sheet_11
+  - first:
+      213: -3741970817228122494
+    second: logocr-Sheet_12
+  - first:
+      213: -5827464674403750505
+    second: logocr-Sheet_13
+  - first:
+      213: -4559224628480398829
+    second: logocr-Sheet_14
+  - first:
+      213: -7955618072121476278
+    second: logocr-Sheet_15
+  - first:
+      213: 8985342822338708629
+    second: logocr-Sheet_16
+  - first:
+      213: -2228208297448932219
+    second: logocr-Sheet_17
+  - first:
+      213: -6529699597337435569
+    second: logocr-Sheet_18
+  - first:
+      213: -7775222506841736821
+    second: logocr-Sheet_19
+  - first:
+      213: 171065913211020938
+    second: logocr-Sheet_20
+  - first:
+      213: -6328790773176634967
+    second: logocr-Sheet_21
+  - first:
+      213: 8726600377893688472
+    second: logocr-Sheet_22
+  - first:
+      213: 1245534709454575163
+    second: logocr-Sheet_23
+  - first:
+      213: 4309899265844924655
+    second: logocr-Sheet_24
+  - first:
+      213: 4790532618253683773
+    second: logocr-Sheet_25
+  - first:
+      213: 8581957831476111165
+    second: logocr-Sheet_26
+  - first:
+      213: -3074592036312468074
+    second: logocr-Sheet_27
+  - first:
+      213: 3354591928701712662
+    second: logocr-Sheet_28
+  - first:
+      213: 4803424845526001311
+    second: logocr-Sheet_29
+  - first:
+      213: -7637602793789047980
+    second: logocr-Sheet_30
+  - first:
+      213: -7874835656881298402
+    second: logocr-Sheet_31
+  - first:
+      213: 6789320056586754014
+    second: logocr-Sheet_32
+  - first:
+      213: -7630649669545887908
+    second: logocr-Sheet_33
+  - first:
+      213: 8105395436586711818
+    second: logocr-Sheet_34
+  - first:
+      213: -9163363000866058410
+    second: logocr-Sheet_35
+  - first:
+      213: -1512085907679127322
+    second: logocr-Sheet_36
+  - first:
+      213: 1158715340513528409
+    second: logocr-Sheet_37
+  - first:
+      213: 2011520112165740066
+    second: logocr-Sheet_38
+  - first:
+      213: -6526876476150855652
+    second: logocr-Sheet_39
+  - first:
+      213: 6520904657172336595
+    second: logocr-Sheet_40
+  - first:
+      213: -1521720650478961554
+    second: logocr-Sheet_41
+  - first:
+      213: -2697101915010758709
+    second: logocr-Sheet_42
+  - first:
+      213: -7544067692589311338
+    second: logocr-Sheet_43
+  - first:
+      213: 1241770302121564072
+    second: logocr-Sheet_44
+  - first:
+      213: 8362301173476485226
+    second: logocr-Sheet_45
+  - first:
+      213: -4572838680933425038
+    second: logocr-Sheet_46
+  - first:
+      213: -4496318112379459073
+    second: logocr-Sheet_47
+  - first:
+      213: -6898244877748183509
+    second: logocr-Sheet_48
+  - first:
+      213: -6779414535384816186
+    second: logocr-Sheet_49
+  - first:
+      213: 5374454998533025471
+    second: logocr-Sheet_50
+  - first:
+      213: 2237298307090627282
+    second: logocr-Sheet_51
+  - first:
+      213: -1788125388930722247
+    second: logocr-Sheet_52
+  - first:
+      213: 7165241417518254324
+    second: logocr-Sheet_53
+  - first:
+      213: -2220686555932124390
+    second: logocr-Sheet_54
+  - first:
+      213: 5347717455180129055
+    second: logocr-Sheet_55
+  - first:
+      213: -1745522013269839800
+    second: logocr-Sheet_56
+  - first:
+      213: -4558829307325963799
+    second: logocr-Sheet_57
+  - first:
+      213: 8657438667258884968
+    second: logocr-Sheet_58
+  - first:
+      213: -2701419517092643415
+    second: logocr-Sheet_59
+  - first:
+      213: -3238902355625818157
+    second: logocr-Sheet_60
+  - first:
+      213: -1270425303847958471
+    second: logocr-Sheet_61
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: logocr-Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 202
+        width: 80
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ff960dc97c1af290800000000000000
+      internalID: -7855935290538024967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logocr-Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 202
+        width: 80
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 858a9aca45ca3ed40800000000000000
+      internalID: 5612519040307800152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logocr-Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 101
+        width: 80
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9c3218aec7790250800000000000000
+      internalID: 5911387715367222426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logocr-Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 101
+        width: 80
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 39b1867b6dcab7500800000000000000
+      internalID: 395099430525082515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logocr-Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 80
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc7854b76976f1540800000000000000
+      internalID: 4980813608905967563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logocr-Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 0
+        width: 80
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3483c406392972020800000000000000
+      internalID: 2316981694978865219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: c48161e5056f1064f985ccba36839f1f
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      logocr-Sheet_0: -7855935290538024967
+      logocr-Sheet_1: 5612519040307800152
+      logocr-Sheet_2: 5911387715367222426
+      logocr-Sheet_3: 395099430525082515
+      logocr-Sheet_4: 4980813608905967563
+      logocr-Sheet_5: 2316981694978865219
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

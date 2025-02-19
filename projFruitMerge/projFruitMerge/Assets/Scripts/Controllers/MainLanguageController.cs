@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using UnityEngine;
@@ -29,6 +30,9 @@ class MainLanguageController : MonoBehaviour
     [SerializeField] private GameObject IdText;
     [SerializeField] private GameObject Understood;
 
+    [SerializeField] private GameObject ConnectionTitle;
+    [SerializeField] private GameObject Reconnect;
+    [SerializeField] private GameObject Reconnecting;
 
     public void Translate(int index)
     {
@@ -54,6 +58,9 @@ class MainLanguageController : MonoBehaviour
         UIManager.SetText(Explanation, gameText.Explanation);
         UIManager.SetText(IdText, gameText.IdText);
         UIManager.SetText(Understood, gameText.Understood);
+        UIManager.SetText(ConnectionTitle, gameText.Offline);
+        UIManager.SetText(Reconnect, gameText.Reconnect);
+        UIManager.SetText(Reconnecting, gameText.Reconnecting);
     }
 
     public string GetScoreString(int index)
