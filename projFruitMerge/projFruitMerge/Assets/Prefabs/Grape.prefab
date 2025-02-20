@@ -138,6 +138,7 @@ MonoBehaviour:
   Pop: {fileID: 8300000, guid: c6cb7889b2e397a44931c38b83f7ad0b, type: 3}
   NextFruit: {fileID: 68097804642267378, guid: 4b9e752ba637f5d4eb1781cf08999f99, type: 3}
   PointsToAddOnMerge: 500
+  TimeToJoin: 0.02
 --- !u!58 &3805901473827022097
 CircleCollider2D:
   m_ObjectHideFlags: 0

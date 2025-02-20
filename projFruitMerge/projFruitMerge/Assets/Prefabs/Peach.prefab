@@ -125,8 +125,8 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.00059086084, y: -0.010000005}
-  m_Radius: 0.19186184
+  m_Offset: {x: 0, y: 0}
+  m_Radius: 0.1773577
 --- !u!50 &2098255760055162533
 Rigidbody2D:
   serializedVersion: 5
@@ -173,6 +173,7 @@ MonoBehaviour:
   Pop: {fileID: 8300000, guid: c6cb7889b2e397a44931c38b83f7ad0b, type: 3}
   NextFruit: {fileID: 847391902044803537, guid: a79ec14424ae503448d9163cf6a1e29e, type: 3}
   PointsToAddOnMerge: 200
+  TimeToJoin: 0.02
 --- !u!82 &2534315766842237856
 AudioSource:
   m_ObjectHideFlags: 0

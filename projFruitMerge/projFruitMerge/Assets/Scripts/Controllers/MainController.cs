@@ -14,6 +14,10 @@ public class MainController : MonoBehaviour
     [SerializeField] GameObject OfflineDialog;
     [SerializeField] GameObject ReconnectDialog;
 
+    [SerializeField] GameObject PlayButton;
+    [SerializeField] GameObject OptionButton;
+    [SerializeField] GameObject RankingButton;
+
     [SerializeField] GameObject ID;
     [SerializeField] GameObject Version;
     [SerializeField] GameObject YourPosition;
@@ -59,11 +63,16 @@ public class MainController : MonoBehaviour
 
     IEnumerator AskToReconnect()
     {
-        Dialog.Move();
-
-        if (ServerManager.GetSucessfull != true && ServerManager.PostSucessfull != true)
+        if (ServerManager.GetSucessfull != true || ServerManager.PostSucessfull != true)
         {
+            Dialog.Moving = true;
             OfflineDialog.SetActive(true);
+            ReconnectDialog.SetActive(false);
+            IDDialog.SetActive(false);
+
+            UIManager.SetButtonEnable(PlayButton, false);
+            UIManager.SetButtonEnable(OptionButton, false);
+            UIManager.SetButtonEnable(RankingButton, false);
 
             yield return new WaitUntil(() => connected);
         }
@@ -77,11 +86,18 @@ public class MainController : MonoBehaviour
 
             OfflineDialog.SetActive(false);
             IDDialog.SetActive(true);
-            Dialog.Move();
+            Dialog.Moving = true;
         }
+        else CloseDialog();
 
         RankingController.CreateRanking(LanguageController.GetScoreString(Player.Language));
         UIManager.SetText(YourPosition, ServerManager.Ranking.user_position);
+
+        UIManager.SetButtonEnable(PlayButton, true);
+        UIManager.SetButtonEnable(OptionButton, true);
+        UIManager.SetButtonEnable(RankingButton, true);
+
+        InvokeRepeating("CheckConnectionEveryTenSeconds", 10, 10);
     }
 
     IEnumerator TryToReconnect()
@@ -120,12 +136,29 @@ public class MainController : MonoBehaviour
         yield return ServerManager.SendGetRequest();
         yield return new WaitForSeconds(0.5f);
 
-        if (ServerManager.GetSucessfull != true && ServerManager.PostSucessfull != true)
+        if (ServerManager.GetSucessfull != true || ServerManager.PostSucessfull != true)
         {
             OfflineDialog.SetActive(true);
             ReconnectDialog.SetActive(false);
         }
         else connected = true;
+    }
+
+    private void CheckConnectionEveryTenSeconds()
+    {
+        StartCoroutine(CheckConnection());
+    }
+
+    private IEnumerator CheckConnection()
+    {
+        yield return ServerManager.CheckConnectionWithPing();
+
+        if (ServerManager.GetSucessfull != true || ServerManager.PostSucessfull != true)
+        {
+            connected = false;
+            CancelInvoke();
+            StartCoroutine(AskToReconnect());
+        }
     }
 
     private void OnApplicationQuit()
@@ -171,9 +204,9 @@ public class MainController : MonoBehaviour
     public void CloseDialog()
     {
         var rt = Dialog.GetComponent<RectTransform>();
-        rt.anchoredPosition = new Vector2(0, -397);
+        rt.anchoredPosition = new Vector2(0, -337);
 
-        Form.Moving = false;
+        Dialog.Moving = false;
     }
 
     public void SetMusicsOn(ToggleController MusicsToggle)
@@ -187,8 +220,6 @@ public class MainController : MonoBehaviour
     public void SetSoundsOn(ToggleController SoundsToggle)
     {
         Player.Sounds = SoundsToggle.On ? 1 : 0;
-
-        Debug.Log(Player.Sounds);
 
         if (Player.Sounds == 0) SoundVolumeController.SetVolume(0f);
         else SoundVolumeController.SetVolume(0.3f);

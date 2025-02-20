@@ -18,6 +18,7 @@ public class FruitController : MonoBehaviour
     [SerializeField] GameObject NextFruit;
 
     [SerializeField] int PointsToAddOnMerge;
+    [SerializeField] float TimeToJoin;
 
     private GraphicRaycaster graphicRaycaster;
     private EventSystem eventSystem;
@@ -85,7 +86,7 @@ public class FruitController : MonoBehaviour
 
                 collisionTime += Time.deltaTime;
 
-                if (fruitCollided.tag == gameObject.tag && !collided && collisionTime >= 0.02f)
+                if (fruitCollided.tag == gameObject.tag && !collided && collisionTime >= TimeToJoin)
                 {
                     var go = Instantiate(NextFruit, transform.position, Quaternion.identity, transform.parent);
                     var ft = go.GetComponent<FruitController>();

@@ -115,7 +115,7 @@ public class SplashscreenController : MonoBehaviour
     IEnumerator WaitUntilLoad()
     {
         AudioSource.Play();
-        yield return new WaitForSeconds(2.5f);
+        yield return new WaitForSeconds(3f);
 
         AudioSource.clip = Plim;
         AudioSource.Play();
@@ -124,7 +124,7 @@ public class SplashscreenController : MonoBehaviour
         yield return new WaitForSeconds(1f);
 
         Logo.gameObject.SetActive(false);
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(1f);
         yield return new WaitUntil(() => loaded = true);
 
         SceneLoaderManager.LoadScene(1);

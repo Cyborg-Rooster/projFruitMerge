@@ -139,6 +139,7 @@ MonoBehaviour:
   Pop: {fileID: 8300000, guid: c6cb7889b2e397a44931c38b83f7ad0b, type: 3}
   NextFruit: {fileID: 6194916442714615303, guid: 777654cd87954da4a9d2f618b863e143, type: 3}
   PointsToAddOnMerge: 750
+  TimeToJoin: 0.02
 --- !u!58 &-8095007497555878804
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -173,8 +174,8 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.20318133, y: -0.31}
-  m_Radius: 0.18024409
+  m_Offset: {x: -0.20318128, y: -0.31394506}
+  m_Radius: 0.15262872
 --- !u!58 &1239145253552141923
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -209,8 +210,8 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.07090461, y: 0.18}
-  m_Radius: 0.31537652
+  m_Offset: {x: 0.06695956, y: 0.17605495}
+  m_Radius: 0.29959625
 --- !u!58 &1606241249963770033
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -245,8 +246,8 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.053928524, y: -0.09}
-  m_Radius: 0.24571416
+  m_Offset: {x: -0.053139538, y: -0.089999944}
+  m_Radius: 0.2307229
 --- !u!82 &-1075166301984889594
 AudioSource:
   m_ObjectHideFlags: 0

@@ -18,9 +18,12 @@ public class GameController : MonoBehaviour
 
     [Space()]
     [SerializeField] ParallaxController PointUI;
-    [SerializeField] ParallaxController Dialog;
+    [SerializeField] ParallaxController Form;
     [SerializeField] ParallaxController NextUI;
     [SerializeField] ParallaxController OptionsUI;
+    [SerializeField] ParallaxController Dialog;
+    [SerializeField] GameObject OfflineDialog;
+    [SerializeField] GameObject ReconnectDialog;
 
     [Space()]
     [SerializeField] GameObject GameOver;
@@ -46,6 +49,7 @@ public class GameController : MonoBehaviour
     public int Points;
 
     public bool OnGame = true;
+    bool connected;
 
 
     private void Start()
@@ -78,6 +82,85 @@ public class GameController : MonoBehaviour
         }
 
         StartCoroutine(FadeController.FadeOut());
+        InvokeRepeating("CheckConnectionEveryTenSeconds", 10, 10);
+    }
+
+    IEnumerator AskToReconnect()
+    {
+        if (ServerManager.GetSucessfull != true || ServerManager.PostSucessfull != true)
+        {
+            Dialog.Moving = true;
+            OfflineDialog.SetActive(true);
+            ReconnectDialog.SetActive(false);
+
+            UIManager.SetButtonEnable(OptionsUI.gameObject, false);
+
+            OnGame = false;
+
+            yield return new WaitUntil(() => connected);
+        }
+
+        ReconnectDialog.SetActive(false);
+        CloseDialog();
+
+        RankingController.CreateRanking(LanguageController.GetScoreString(Player.Language));
+        UIManager.SetText(YourPosition, ServerManager.Ranking.user_position);
+
+        OnGame = true;
+
+        UIManager.SetButtonEnable(OptionsUI.gameObject, true);
+
+        InvokeRepeating("CheckConnectionEveryTenSeconds", 10, 10);
+    }
+
+    IEnumerator TryToReconnect()
+    {
+        yield return new WaitForSeconds(.2f);
+
+        OfflineDialog.SetActive(false);
+        ReconnectDialog.SetActive(true);
+
+        ServerManager.PostSucessfull = true;
+
+        yield return ServerManager.SendGetRequest();
+        yield return new WaitForSeconds(0.5f);
+
+        if (ServerManager.GetSucessfull != true || ServerManager.PostSucessfull != true)
+        {
+            OfflineDialog.SetActive(true);
+            ReconnectDialog.SetActive(false);
+        }
+        else connected = true;
+    }
+
+    private void CheckConnectionEveryTenSeconds()
+    {
+        StartCoroutine(CheckConnection());
+    }
+
+    private IEnumerator CheckConnection()
+    {
+        yield return ServerManager.CheckConnectionWithPing();
+
+        if (ServerManager.GetSucessfull != true || ServerManager.PostSucessfull != true)
+        {
+            connected = false;
+            CancelInvoke();
+            StartCoroutine(AskToReconnect());
+        }
+    }
+
+    public void Reconnect()
+    {
+        StartCoroutine(TryToReconnect());
+    }
+
+    public void CloseDialog()
+    {
+        var rt = Dialog.GetComponent<RectTransform>();
+        rt.anchoredPosition = new Vector2(0, -337);
+
+        Dialog.Moving = false;
     }
 
     private void Update()
@@ -128,7 +211,7 @@ public class GameController : MonoBehaviour
         Options.SetActive(false);
         GameOver.SetActive(true);
 
-        Dialog.Moving = true;
+        Form.Moving = true;
         PointUI.Moving = true;
         NextUI.Moving = true;
         OptionsUI.Moving = true;
@@ -155,15 +238,15 @@ public class GameController : MonoBehaviour
         Options.SetActive(true);
         GameOver.SetActive(false);
 
-        Dialog.Moving = true;
+        Form.Moving = true;
     }
 
     public void Unpause()
     {
-        var rt = Dialog.GetComponent<RectTransform>();
+        var rt = Form.GetComponent<RectTransform>();
         rt.anchoredPosition = new Vector2 (0, -397);
 
-        Dialog.Moving = false;
+        Form.Moving = false;
         SaveGame();
         StartCoroutine(WaitUntilNextFrame());
     }

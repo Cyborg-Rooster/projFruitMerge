@@ -128,9 +128,10 @@ class ServerManager
         }
     }
 
-    IEnumerator CheckConnectionWithPing()
+    public static IEnumerator CheckConnectionWithPing()
     {
         Ping ping = new Ping("8.8.8.8"); // Servidor do Google DNS
+
         yield return new WaitUntil(() => ping.isDone);
 
         if (ping.time >= 0)
@@ -140,6 +141,8 @@ class ServerManager
         else
         {
             Debug.Log("Conexão perdida");
+            PostSucessfull = false;
+            GetSucessfull = false;
         }
     }
 
