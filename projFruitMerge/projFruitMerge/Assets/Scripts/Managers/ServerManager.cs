@@ -3,6 +3,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.NetworkInformation;
 using System.Text;
 using System.Threading.Tasks;
 using UnityEngine;
@@ -56,7 +57,7 @@ class ServerManager
     {
         GetSucessfull = null;
 
-        using (UnityWebRequest request = new UnityWebRequest("https://www.gagliardicacambas.com.br/api/index.php/users", "GET"))
+        using (UnityWebRequest request = new UnityWebRequest($"https://www.gagliardicacambas.com.br/api/index.php/users?IDUser={Player.IDUser}", "GET"))
         {
             request.downloadHandler = new DownloadHandlerBuffer();
 
@@ -128,24 +129,26 @@ class ServerManager
         }
     }
 
-    public static IEnumerator CheckConnectionWithPing()
+    public static IEnumerator CheckConnection()
     {
-        Ping ping = new Ping("8.8.8.8"); // Servidor do Google DNS
-
-        yield return new WaitUntil(() => ping.isDone);
-
-        if (ping.time >= 0)
+        using (UnityWebRequest request = new UnityWebRequest($"https://www.google.com", "GET"))
         {
-            Debug.Log("Conexão estável");
-        }
-        else
-        {
-            Debug.Log("Conexão perdida");
-            PostSucessfull = false;
-            GetSucessfull = false;
+            // Aguarda a conclusão da requisição
+            yield return request.SendWebRequest();
+
+            // Tratamento de resposta
+            if (request.result == UnityWebRequest.Result.Success)
+            {
+                Debug.Log("Conexão estável");
+            }
+            else
+            {
+                Debug.Log("Conexão perdida");
+                PostSucessfull = false;
+                GetSucessfull = false;
+            }
         }
     }
-
     public static IEnumerator WaitUntilRankingDownloaded()
     {
         yield return new WaitUntil(() => Ranking != null);

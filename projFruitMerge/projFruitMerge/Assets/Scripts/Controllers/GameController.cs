@@ -140,7 +140,7 @@ public class GameController : MonoBehaviour
 
     private IEnumerator CheckConnection()
     {
-        yield return ServerManager.CheckConnectionWithPing();
+        yield return ServerManager.CheckConnection();
 
         if (ServerManager.GetSucessfull != true || ServerManager.PostSucessfull != true)
         {
