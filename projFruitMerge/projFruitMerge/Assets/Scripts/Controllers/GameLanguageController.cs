@@ -28,7 +28,9 @@ class GameLanguageController : MonoBehaviour
     [SerializeField] private GameObject audioText;
     [SerializeField] private GameObject distribuitionText;
     [SerializeField] private GameObject backToMainText;
-
+    [SerializeField] private GameObject ConnectionTitle;
+    [SerializeField] private GameObject Reconnect;
+    [SerializeField] private GameObject Reconnecting;
 
     public void Translate(int index)
     {
@@ -52,7 +54,9 @@ class GameLanguageController : MonoBehaviour
         UIManager.SetText(audioText, gameText.AudioText);
         UIManager.SetText(distribuitionText, gameText.DistribuitionText);
         UIManager.SetText(backToMainText, gameText.BackToMainText);
-
+        UIManager.SetText(ConnectionTitle, gameText.Offline);
+        UIManager.SetText(Reconnect, gameText.Reconnect);
+        UIManager.SetText(Reconnecting, gameText.Reconnecting);
     }
 
     public string GetScoreString(int index)

@@ -11,7 +11,7 @@ class RankingController : MonoBehaviour
 
     List<GameObject> RankingItems = new List<GameObject>();
 
-    public void CreateRanking(string pontuation)
+    private void CreateRanking(string pontuation)
     {
         for(int i = 0; i < ServerManager.Ranking.ranking.Length; i++)
         {

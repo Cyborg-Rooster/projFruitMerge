@@ -17,7 +17,6 @@ class ButtonController : MonoBehaviour
     private void Start()
     {
         ButtonSound = GetComponent<AudioSource>();
-        ButtonSound.volume = 0.5f;
     }
 
     public void ChangeSprite()

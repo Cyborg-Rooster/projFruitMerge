@@ -287,6 +287,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7644160014951174743, guid: 259b9d4b8d43e3d43bca2ac331d533dd, type: 3}
+      propertyPath: m_FontData.m_Alignment
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 8257161728022871081, guid: 259b9d4b8d43e3d43bca2ac331d533dd, type: 3}
       propertyPath: m_Name
       value: Dialog
@@ -888,6 +892,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 908939842}
   m_CullTransparentMesh: 1
+--- !u!1 &939164696 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 38123597124735649, guid: 259b9d4b8d43e3d43bca2ac331d533dd, type: 3}
+  m_PrefabInstance: {fileID: 480607394}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &939164697 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2620801319070234823, guid: 259b9d4b8d43e3d43bca2ac331d533dd, type: 3}
+  m_PrefabInstance: {fileID: 480607394}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &939164698 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 405178704860453487, guid: 259b9d4b8d43e3d43bca2ac331d533dd, type: 3}
+  m_PrefabInstance: {fileID: 480607394}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &990942569 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3671147185260214784, guid: 96c6b2af8e2c74941aa4697a41fc00d9, type: 3}
@@ -942,6 +961,7 @@ MonoBehaviour:
   Dialog: {fileID: 480607399}
   OfflineDialog: {fileID: 480607398}
   ReconnectDialog: {fileID: 480607397}
+  ReconnectDialogText: {fileID: 1805613530}
   GameOver: {fileID: 8771944975091011453}
   Options: {fileID: 6294845421238322625}
   SoundsToggle: {fileID: 2788085637966990973}
@@ -1800,6 +1820,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1805613530 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5658691423574792922, guid: 259b9d4b8d43e3d43bca2ac331d533dd, type: 3}
+  m_PrefabInstance: {fileID: 480607394}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1815751489
 GameObject:
   m_ObjectHideFlags: 0
@@ -1948,6 +1973,9 @@ MonoBehaviour:
   audioText: {fileID: 885780882803444564}
   distribuitionText: {fileID: 4991190306884673061}
   backToMainText: {fileID: 2428740292926845103}
+  ConnectionTitle: {fileID: 939164697}
+  Reconnect: {fileID: 939164698}
+  Reconnecting: {fileID: 939164696}
 --- !u!4 &1988451839
 Transform:
   m_ObjectHideFlags: 0

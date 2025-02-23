@@ -24,6 +24,7 @@ public class GameController : MonoBehaviour
     [SerializeField] ParallaxController Dialog;
     [SerializeField] GameObject OfflineDialog;
     [SerializeField] GameObject ReconnectDialog;
+    [SerializeField] GameObject ReconnectDialogText;
 
     [Space()]
     [SerializeField] GameObject GameOver;
@@ -77,7 +78,7 @@ public class GameController : MonoBehaviour
 
         if (ServerManager.GetSucessfull == true && ServerManager.PostSucessfull == true)
         {
-            RankingController.CreateRanking(LanguageController.GetScoreString(Player.Language));
+            RankingController.Refresh(LanguageController.GetScoreString(Player.Language));
             UIManager.SetText(YourPosition, ServerManager.Ranking.user_position);
         }
 
@@ -103,7 +104,7 @@ public class GameController : MonoBehaviour
         ReconnectDialog.SetActive(false);
         CloseDialog();
 
-        RankingController.CreateRanking(LanguageController.GetScoreString(Player.Language));
+        RankingController.Refresh(LanguageController.GetScoreString(Player.Language));
         UIManager.SetText(YourPosition, ServerManager.Ranking.user_position);
 
         OnGame = true;
@@ -144,6 +145,7 @@ public class GameController : MonoBehaviour
 
         if (ServerManager.GetSucessfull != true || ServerManager.PostSucessfull != true)
         {
+            UIManager.SetText(ReconnectDialogText, ReconnectMessagesInitializer.GetMessage(Player.Language));
             connected = false;
             CancelInvoke();
             StartCoroutine(AskToReconnect());

@@ -34,6 +34,9 @@ class MainLanguageController : MonoBehaviour
     [SerializeField] private GameObject Reconnect;
     [SerializeField] private GameObject Reconnecting;
 
+    [SerializeField] private GameObject BrandNameText;
+    [SerializeField] private GameObject IDText;
+
     public void Translate(int index)
     {
         GameText gameText = LanguageInitializer.bruteValues[index.ToString()];
@@ -61,6 +64,8 @@ class MainLanguageController : MonoBehaviour
         UIManager.SetText(ConnectionTitle, gameText.Offline);
         UIManager.SetText(Reconnect, gameText.Reconnect);
         UIManager.SetText(Reconnecting, gameText.Reconnecting);
+        UIManager.SetText(BrandNameText, "Cyborg Rooster - " + DateTime.Now.Year);
+        UIManager.SetText(IDText, "ID: " + Player.IDUser);
     }
 
     public string GetScoreString(int index)

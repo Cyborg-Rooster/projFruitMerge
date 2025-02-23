@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 
@@ -13,6 +14,7 @@ public class MainController : MonoBehaviour
     [SerializeField] GameObject IDDialog;
     [SerializeField] GameObject OfflineDialog;
     [SerializeField] GameObject ReconnectDialog;
+    [SerializeField] GameObject ReconnectDialogText;
 
     [SerializeField] GameObject PlayButton;
     [SerializeField] GameObject OptionButton;
@@ -65,6 +67,7 @@ public class MainController : MonoBehaviour
     {
         if (ServerManager.GetSucessfull != true || ServerManager.PostSucessfull != true)
         {
+            UIManager.SetText(ReconnectDialogText, ReconnectMessagesInitializer.GetMessage(Player.Language));
             Dialog.Moving = true;
             OfflineDialog.SetActive(true);
             ReconnectDialog.SetActive(false);
@@ -90,7 +93,7 @@ public class MainController : MonoBehaviour
         }
         else CloseDialog();
 
-        RankingController.CreateRanking(LanguageController.GetScoreString(Player.Language));
+        RankingController.Refresh(LanguageController.GetScoreString(Player.Language));
         UIManager.SetText(YourPosition, ServerManager.Ranking.user_position);
 
         UIManager.SetButtonEnable(PlayButton, true);

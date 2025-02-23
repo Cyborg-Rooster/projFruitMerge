@@ -9,6 +9,7 @@ public class SplashscreenController : MonoBehaviour
 
     [SerializeField] LanguageInitializer LanguageInitializer;
     [SerializeField] AdsInitializer AdsInitializer;
+    [SerializeField] ReconnectMessagesInitializer ReconnectMessagesInitializer;
 
     [SerializeField] AudioVolumeController SoundVolumeController;
     [SerializeField] Animator Logo;
@@ -19,16 +20,11 @@ public class SplashscreenController : MonoBehaviour
 
     public bool loaded;
 
-    private void Awake()
-    {
-        Logo.speed = 0;
-        StartCoroutine(WaitUntilInitialize());
-    }
-
     IEnumerator WaitUntilInitialize()
     {
         int l = LanguageInitializer.GetLocalizationIndex();
         LanguageInitializer.Initialize();
+        ReconnectMessagesInitializer.Initialize();
 
         Player.BestScore = 0;
         Player.Sounds = 1;
@@ -46,29 +42,34 @@ public class SplashscreenController : MonoBehaviour
             Player.Language = Convert.ToInt32(data[3]);
             Player.IDUser = data[4].ToString();
             Player.ApiKey = data[5].ToString();
-        } 
-        else ServerManager.FirstTime = true;
 
-        yield return ServerManager.SendPostRequest();
-
-        if (ServerManager.PostSucessfull == true)
+            ServerManager.PostSucessfull = true;
+        }
+        else
         {
-            Player.IDUser = ServerManager.OnlinePlayer.IDUser;
+            ServerManager.FirstTime = true;
 
-            SQLiteManager.RunQuery
-            (
-                CommonQuery.Update
+            yield return ServerManager.SendPostRequest();
+
+            if (ServerManager.PostSucessfull == true)
+            {
+                Player.IDUser = ServerManager.OnlinePlayer.IDUser;
+
+                SQLiteManager.RunQuery
                 (
-                    "PLAYER",
-                    $"BEST_SCORE = {Player.BestScore}, " +
-                    $"SOUNDS = {Player.Sounds}, " +
-                    $"MUSICS = {Player.Musics}, " +
-                    $"LANGUAGE = {Player.Language}, " +
-                    $"IDUSER = '{Player.IDUser}', " +
-                    $"APIKEY = '{Player.ApiKey}'",
-                    "BEST_SCORE = BEST_SCORE"
-                )
-            );
+                    CommonQuery.Update
+                    (
+                        "PLAYER",
+                        $"BEST_SCORE = {Player.BestScore}, " +
+                        $"SOUNDS = {Player.Sounds}, " +
+                        $"MUSICS = {Player.Musics}, " +
+                        $"LANGUAGE = {Player.Language}, " +
+                        $"IDUSER = '{Player.IDUser}', " +
+                        $"APIKEY = '{Player.ApiKey}'",
+                        "BEST_SCORE = BEST_SCORE"
+                    )
+                );
+            }
         }
 
         StartCoroutine(ServerManager.SendGetRequest());
@@ -89,6 +90,10 @@ public class SplashscreenController : MonoBehaviour
     {
 
         AudioSource = GetComponent<AudioSource>();
+
+
+        Logo.speed = 0;
+        StartCoroutine(WaitUntilInitialize());
 
         InvokeRepeating("RemoveCensor", time, time);
         StartCoroutine(WaitUntilLoad());
