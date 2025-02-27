@@ -246,11 +246,11 @@ public class GameController : MonoBehaviour
     public void Unpause()
     {
         var rt = Form.GetComponent<RectTransform>();
-        rt.anchoredPosition = new Vector2 (0, -397);
+        rt.anchoredPosition = new Vector2(0, -397);
+        RankingController.Refresh(LanguageController.GetScoreString(Player.Language));
 
         Form.Moving = false;
         SaveGame();
-        StartCoroutine(WaitUntilNextFrame());
     }
 
     public void SetMusicsOn(ToggleController MusicsToggle)
