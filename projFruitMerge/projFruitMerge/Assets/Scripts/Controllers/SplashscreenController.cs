@@ -5,6 +5,7 @@ using UnityEngine;
 public class SplashscreenController : MonoBehaviour
 {
     [SerializeField] GameObject Censor;
+    [SerializeField] GameObject Loading;
     [SerializeField] float time;
 
     [SerializeField] LanguageInitializer LanguageInitializer;
@@ -129,7 +130,10 @@ public class SplashscreenController : MonoBehaviour
         yield return new WaitForSeconds(1f);
 
         Logo.gameObject.SetActive(false);
-        yield return new WaitForSeconds(1f);
+
+        if(!loaded)
+            Loading.SetActive(true);
+
         yield return new WaitUntil(() => loaded = true);
 
         SceneLoaderManager.LoadScene(1);

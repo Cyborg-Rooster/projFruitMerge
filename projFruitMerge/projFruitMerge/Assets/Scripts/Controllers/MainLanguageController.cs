@@ -74,4 +74,9 @@ class MainLanguageController : MonoBehaviour
 
         return gameText.BestScoreText;
     }
+
+    public void SetIDText()
+    {
+        UIManager.SetText(IDText, "ID: " + Player.IDUser);
+    }
 }

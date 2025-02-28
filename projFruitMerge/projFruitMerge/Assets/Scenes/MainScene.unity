@@ -4952,6 +4952,22 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 894411969}
+    - target: {fileID: 5386977363274809404, guid: 259b9d4b8d43e3d43bca2ac331d533dd, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7439103774839689958, guid: 259b9d4b8d43e3d43bca2ac331d533dd, type: 3}
+      propertyPath: m_Color.b
+      value: 0.22352943
+      objectReference: {fileID: 0}
+    - target: {fileID: 7439103774839689958, guid: 259b9d4b8d43e3d43bca2ac331d533dd, type: 3}
+      propertyPath: m_Color.g
+      value: 0.24705884
+      objectReference: {fileID: 0}
+    - target: {fileID: 7439103774839689958, guid: 259b9d4b8d43e3d43bca2ac331d533dd, type: 3}
+      propertyPath: m_Color.r
+      value: 0.454902
+      objectReference: {fileID: 0}
     - target: {fileID: 7644160014951174743, guid: 259b9d4b8d43e3d43bca2ac331d533dd, type: 3}
       propertyPath: m_Text
       value: "Sem internet voc\xEA n\xE3o v\xEA an\xFAncios, mas tamb\xE9m n\xE3o

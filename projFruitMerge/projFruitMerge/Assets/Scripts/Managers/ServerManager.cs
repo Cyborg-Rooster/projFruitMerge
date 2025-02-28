@@ -63,7 +63,7 @@ class ServerManager
 
             request.SetRequestHeader("Content-Type", "application/json");
             request.SetRequestHeader("X-API-KEY", Player.ApiKey);
-            request.timeout = 3;
+            request.timeout = 5;
 
             // Aguarda a conclusão da requisição
             yield return request.SendWebRequest();
@@ -95,7 +95,7 @@ class ServerManager
 
             request.SetRequestHeader("Content-Type", "application/json");
             request.SetRequestHeader("X-API-KEY", Player.ApiKey);
-            request.timeout = 2;
+            request.timeout = 5;
 
             OnlinePlayer = new OnlinePlayer()
             {

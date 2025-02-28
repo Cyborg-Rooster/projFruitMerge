@@ -78,6 +78,8 @@ public class MainController : MonoBehaviour
             UIManager.SetButtonEnable(RankingButton, false);
 
             yield return new WaitUntil(() => connected);
+
+            LanguageController.SetIDText();
         }
 
         ReconnectDialog.SetActive(false);
