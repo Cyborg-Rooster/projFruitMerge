@@ -1662,16 +1662,16 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1101776824}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2212166529448472372}
+  m_Father: {fileID: 1453600158}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0}
-  m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: 16.77002}
+  m_AnchorMin: {x: 0.5, y: 0.532}
+  m_AnchorMax: {x: 0.5, y: 0.532}
+  m_AnchoredPosition: {x: 8.760005, y: 0}
   m_SizeDelta: {x: 111.06, y: 17.25}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1101776826
@@ -1707,7 +1707,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Cyborg Rooster - '
+  m_Text: Cyborg Rooster - 2025
 --- !u!222 &1101776827
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1772,6 +1772,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   RankingItemController: {fileID: 2351396120868350745, guid: 424f4756bfc09a949bf47f4c8cc262a9, type: 3}
+  ScrollRect: {fileID: 1732904110}
+  Content: {fileID: 1153335335}
 --- !u!114 &1153335338
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2155,6 +2157,43 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1341777761}
   m_CullTransparentMesh: 1
+--- !u!1 &1453600157
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1453600158}
+  m_Layer: 5
+  m_Name: Footer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1453600158
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1453600157}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1688941709}
+  - {fileID: 1101776825}
+  m_Father: {fileID: 2212166529448472372}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.036000002}
+  m_AnchorMax: {x: 0.5, y: 0.036000002}
+  m_AnchoredPosition: {x: -0.0007, y: -0.33996582}
+  m_SizeDelta: {x: 209.59, y: 31.33}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &1469622464 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3100268308635199816, guid: 259b9d4b8d43e3d43bca2ac331d533dd, type: 3}
@@ -2830,16 +2869,16 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1688941708}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2212166529448472372}
+  m_Father: {fileID: 1453600158}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0}
-  m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -64, y: 17}
+  m_AnchorMin: {x: 0.5, y: 0.532}
+  m_AnchorMax: {x: 0.5, y: 0.532}
+  m_AnchoredPosition: {x: -54.2, y: 0}
   m_SizeDelta: {x: 13, y: 12}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1688941710
@@ -4450,8 +4489,7 @@ RectTransform:
   - {fileID: 513846665}
   - {fileID: 7543260136232256548}
   - {fileID: 1469622464}
-  - {fileID: 1688941709}
-  - {fileID: 1101776825}
+  - {fileID: 1453600158}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}

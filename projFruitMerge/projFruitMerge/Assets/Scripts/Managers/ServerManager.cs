@@ -16,7 +16,7 @@ class ServerManager
 
     public static bool? PostSucessfull;
     public static bool? GetSucessfull;
-    public static bool? PutSucessful;
+    public static bool? PutSucessfull;
     public static bool FirstTime;
 
     public static IEnumerator SendPostRequest()
@@ -30,7 +30,7 @@ class ServerManager
 
             request.SetRequestHeader("Content-Type", "application/json");
             request.SetRequestHeader("X-API-KEY", Player.ApiKey);
-            request.timeout = 3;
+            //request.timeout = 3;
 
             // Aguarda a conclusão da requisição
             yield return request.SendWebRequest();
@@ -48,7 +48,9 @@ class ServerManager
             else 
             {
                 Debug.LogError("Erro na requisição POST: " + request.error);
-                PostSucessfull = false; 
+                PutSucessfull = false;
+                PostSucessfull = false;
+                GetSucessfull = false;
             }
         }
     }
@@ -63,7 +65,7 @@ class ServerManager
 
             request.SetRequestHeader("Content-Type", "application/json");
             request.SetRequestHeader("X-API-KEY", Player.ApiKey);
-            request.timeout = 5;
+            //request.timeout = 5;
 
             // Aguarda a conclusão da requisição
             yield return request.SendWebRequest();
@@ -71,7 +73,6 @@ class ServerManager
             // Tratamento de resposta
             if (request.result == UnityWebRequest.Result.Success)
             {
-
                 GetSucessfull = true;
 
                 string jsonResponse = request.downloadHandler.text;
@@ -82,6 +83,8 @@ class ServerManager
             else 
             {
                 Debug.LogError("Erro na requisição GET: " + request.error);
+                PutSucessfull = false;
+                PostSucessfull = false;
                 GetSucessfull = false;
             }
         }
@@ -89,13 +92,15 @@ class ServerManager
 
     public static IEnumerator SendPutRequest()
     {
+        PutSucessfull = null;
         using (UnityWebRequest request = new UnityWebRequest("https://www.gagliardicacambas.com.br/api/index.php/users", "PUT"))
         {
             request.downloadHandler = new DownloadHandlerBuffer();
 
             request.SetRequestHeader("Content-Type", "application/json");
             request.SetRequestHeader("X-API-KEY", Player.ApiKey);
-            request.timeout = 5;
+
+            request.timeout = 3;
 
             OnlinePlayer = new OnlinePlayer()
             {
@@ -114,7 +119,7 @@ class ServerManager
             // Verifica o resultado
             if (request.result == UnityWebRequest.Result.Success)
             {
-                PutSucessful = true;
+                PutSucessfull = true;
 
                 string jsonResponse = request.downloadHandler.text;
 
@@ -124,7 +129,9 @@ class ServerManager
             else
             {
                 Debug.LogError("Erro na requisição PUT: " + request.error);
-                PutSucessful = false;
+                PutSucessfull = false;
+                PostSucessfull = false;
+                GetSucessfull = false;
             }
         }
     }
@@ -144,6 +151,7 @@ class ServerManager
             else
             {
                 Debug.Log("Conexão perdida");
+                PutSucessfull = false;
                 PostSucessfull = false;
                 GetSucessfull = false;
             }

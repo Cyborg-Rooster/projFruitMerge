@@ -8,6 +8,8 @@ using UnityEngine;
 class RankingController : MonoBehaviour
 {
     [SerializeField] RankingItemController RankingItemController;
+    [SerializeField] GameObject ScrollRect;
+    [SerializeField] GameObject Content;
 
     List<GameObject> RankingItems = new List<GameObject>();
 
@@ -21,6 +23,7 @@ class RankingController : MonoBehaviour
             RankingItems.Add(go.gameObject);
             go.SetText(i + 1, r.IDUser, pontuation, r.Score);
         }
+
     }
 
     public void Refresh(string pontuation)

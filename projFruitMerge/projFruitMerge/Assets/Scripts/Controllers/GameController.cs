@@ -23,6 +23,7 @@ public class GameController : MonoBehaviour
     [SerializeField] ParallaxController OptionsUI;
     [SerializeField] ParallaxController Dialog;
     [SerializeField] GameObject OfflineDialog;
+    [SerializeField] GameObject BlockUIForOffline;
     [SerializeField] GameObject ReconnectDialog;
     [SerializeField] GameObject ReconnectDialogText;
 
@@ -46,6 +47,7 @@ public class GameController : MonoBehaviour
     [SerializeField] int Time;
 
     RaycastManager RaycastManager;
+    IEnumerator CheckConnectionCoroutine;
 
     public int Points;
 
@@ -83,7 +85,9 @@ public class GameController : MonoBehaviour
         }
 
         StartCoroutine(FadeController.FadeOut());
-        InvokeRepeating("CheckConnectionEveryTenSeconds", 10, 10);
+
+        CheckConnectionCoroutine = CheckConnectionEveryTenSeconds();
+        StartCoroutine(CheckConnectionCoroutine);
     }
 
     IEnumerator AskToReconnect()
@@ -91,12 +95,11 @@ public class GameController : MonoBehaviour
         if (ServerManager.GetSucessfull != true || ServerManager.PostSucessfull != true)
         {
             Dialog.Moving = true;
+            BlockUIForOffline.SetActive(true);
             OfflineDialog.SetActive(true);
             ReconnectDialog.SetActive(false);
 
             UIManager.SetButtonEnable(OptionsUI.gameObject, false);
-
-            OnGame = false;
 
             yield return new WaitUntil(() => connected);
         }
@@ -104,14 +107,14 @@ public class GameController : MonoBehaviour
         ReconnectDialog.SetActive(false);
         CloseDialog();
 
+        BlockUIForOffline.SetActive(false);
+
         RankingController.Refresh(LanguageController.GetScoreString(Player.Language));
         UIManager.SetText(YourPosition, ServerManager.Ranking.user_position);
 
-        OnGame = true;
-
         UIManager.SetButtonEnable(OptionsUI.gameObject, true);
 
-        InvokeRepeating("CheckConnectionEveryTenSeconds", 10, 10);
+        StartCoroutine(CheckConnectionCoroutine);
     }
 
     IEnumerator TryToReconnect()
@@ -134,9 +137,12 @@ public class GameController : MonoBehaviour
         else connected = true;
     }
 
-    private void CheckConnectionEveryTenSeconds()
+    private IEnumerator CheckConnectionEveryTenSeconds()
     {
+        yield return new WaitForSeconds(10f);
         StartCoroutine(CheckConnection());
+
+        StartCoroutine(CheckConnectionCoroutine);
     }
 
     private IEnumerator CheckConnection()
@@ -145,11 +151,18 @@ public class GameController : MonoBehaviour
 
         if (ServerManager.GetSucessfull != true || ServerManager.PostSucessfull != true)
         {
-            UIManager.SetText(ReconnectDialogText, ReconnectMessagesInitializer.GetMessage(Player.Language));
-            connected = false;
-            CancelInvoke();
-            StartCoroutine(AskToReconnect());
+            Connect();
         }
+    }
+
+    void Connect()
+    {
+        UIManager.SetText(ReconnectDialogText, ReconnectMessagesInitializer.GetMessage(Player.Language));
+        connected = false;
+
+        StopCoroutine(CheckConnectionCoroutine);
+
+        StartCoroutine(AskToReconnect());
     }
 
     public void Reconnect()
@@ -169,6 +182,7 @@ public class GameController : MonoBehaviour
     {
         if(RaycastManager.IsColliding(Distance, Distance, StartPosition, LayerMask) && OnGame)
         {
+            OnGame = false;
             StartCoroutine(EndGame());
         }
     }
@@ -193,23 +207,6 @@ public class GameController : MonoBehaviour
     {
         UIManager.SetButtonEnable(OptionsUI.gameObject, false);
 
-        if (Player.BestScore < Points)
-        { 
-            Player.BestScore = Points; 
-            NewText.SetActive(true);
-
-            if (ServerManager.GetSucessfull == true && ServerManager.PostSucessfull == true)
-            {
-                ServerManager.Ranking.ResortRanking(Player.BestScore);
-
-                yield return WaitUntilGetPosition();
-                RankingController.Refresh(LanguageController.GetScoreString(Player.Language));
-            }
-        }
-
-        UIManager.SetText(BestScoreText, Player.BestScore);
-        OnGame = false;
-
         Options.SetActive(false);
         GameOver.SetActive(true);
 
@@ -218,6 +215,32 @@ public class GameController : MonoBehaviour
         NextUI.Moving = true;
         OptionsUI.Moving = true;
 
+        if (Player.BestScore < Points)
+        { 
+            Player.BestScore = Points; 
+            NewText.SetActive(true);
+
+            UIManager.SetText(BestScoreText, Player.BestScore);
+
+            do
+            {
+                yield return WaitUntilGetPosition();
+
+                if (ServerManager.PutSucessfull == true)
+                {
+                    RankingController.Refresh(LanguageController.GetScoreString(Player.Language));
+                    ServerManager.Ranking.ResortRanking(Player.BestScore);
+                }
+                else
+                {
+                    Connect();
+                    yield return new WaitUntil(() => connected);
+                }
+
+            } while (ServerManager.PutSucessfull != true);
+        }
+        else UIManager.SetText(BestScoreText, Player.BestScore);
+
         SaveGame();
     }
 
@@ -225,12 +248,6 @@ public class GameController : MonoBehaviour
     {
         yield return ServerManager.SendPutRequest();
         UIManager.SetText(YourPosition, ServerManager.Ranking.user_position);
-    }
-
-    IEnumerator WaitUntilNextFrame()
-    {
-        yield return new WaitForEndOfFrame();
-        OnGame = true;
     }
 
     public void Pause()
@@ -246,7 +263,7 @@ public class GameController : MonoBehaviour
     public void Unpause()
     {
         var rt = Form.GetComponent<RectTransform>();
-        rt.anchoredPosition = new Vector2(0, -397);
+        rt.anchoredPosition = new Vector2(0, -584.6f);
         RankingController.Refresh(LanguageController.GetScoreString(Player.Language));
 
         Form.Moving = false;
