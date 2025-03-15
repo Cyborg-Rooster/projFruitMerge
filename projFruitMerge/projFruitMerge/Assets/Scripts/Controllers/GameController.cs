@@ -265,6 +265,7 @@ public class GameController : MonoBehaviour
         var rt = Form.GetComponent<RectTransform>();
         rt.anchoredPosition = new Vector2(0, -584.6f);
         RankingController.Refresh(LanguageController.GetScoreString(Player.Language));
+        OnGame = true;
 
         Form.Moving = false;
         SaveGame();
